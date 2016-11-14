@@ -1,78 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Mad King - Flawed Magic</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="./main.js"></script>
+    <meta charset="UTF-8">
+    <title>Mad King - Flawed Magic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="./script/jquery-3.1.1.min.js"></script>
+    <script src="./script/jquery-ui.min.js"></script>
+    <script src="./script/main.js"></script>
 </head>
+
 <body>
-	<div id="relation">
-		<h2 id="re-text">0</h2>
-	</div>
-	<label class="hint-text">Here is your relationship with Hedda<br>Your decision might influence the value</label>
+    <div id="main">
+        <div id="relation">
+            <h2 id="re-text">0</h2>
+        </div>
+        <label class="hint-text">Here is your relationship with Hedda
+            <br>Your decision might influence the value</label>
+        <div id="day1-1" class="pages">
+            <div class="left-module">
+                <div id="day1-1pic">
+                    <div id="day1-mom">
+                        <img src="./img/day1-mom.png">
+                    </div>
+                    <div id="day1-button">
+                        <img src="./img/day1-button.png" onclick="show('day1-mom');show('day1-1text')">
+                    </div>
+                </div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div id="day1-1text">
+                    <p>You push the door gingerly and it swings open with ease, a blast of repulsive aroma streams past you and some green haze drifted from the room out of sight. “Mom” you whisper.</p>
+                    <p>There is no answer there.</p>
+                    <p>You <span onclick="hide('day1-1');show('day1-2')">sneak into the workshop</span> and close the door fluently. You have repeated these actions hundreds of times whenever your Witch mom is not at home. </p>
+                </div>
+            </div>
+        </div>
+        <div id="day1-2" class="pages">
+            <div class="left-module">
+                <div id="day1-2pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div class="day-text">
+                    <p>Shelves crammed with glass jars of weird ingredients; a black pointed hat rests on a shabby broomstick; several cauldrons are still bubbling and steaming with self-stirring spoons. </p>
+                    <p>You don’t know why she constantly bars you from learning witchery. Witchery is so compelling, you cannot prevent yourself from involving into this magical world. And your belief never change, you are destined to become a famous wizard.</p>
+                    <p>You find out a worn witchery book, read it, then turn to a brewing cauldron.</p>
+                    <p>You are going to <span onclick="hide('day1-2');show('day1-4-1');show('day-puff');show('day-puff1')">make something magic</span>.</p>
+                </div>
+            </div>
+        </div>
 
-	<div id="day1-1" class="page">
-		<div class="left-module">
-			<div id="day1-1pic">
-				<div id="day1-mom">
-					<img src="./img/day1-mom.png">
-				</div>
-				<div id="day1-button">
-					<img src="./img/day1-button.png" onclick="show('day1-mom');show('day1-1text')">
-				</div>
-			</div>
-		</div>
-		<div class="mid-module"></div>
-		<div class="right-module">
-			<div id="day1-1title"></div>
-			<div id="day1-1text">
-				<p>You push the door gingerly and it swings open with ease, a blast of repulsive aroma streams past you and some green haze drifted from the room out of sight. “Mom” you whisper.</p>
-				<p>There is no answer there.</p>
-				<p>You <span onclick="hide('day1-1');show('day1-2')">sneak into the workshop</span> and close the door fluently. You have repeated these actions hundreds of times whenever your Witch mom is not at home. </p>
-			</div>
-		</div>
-	</div>
+        <div id="day1-4-1" class="pages">
+            <div class="left-module">
+                <div id="day1-4pic">
+                    <img src="./img/day1-3pic.png">
+                </div>
+                <div id="day1-4pic2"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div class="day-text">
+                    <p id="day-elixir">Nearly all of your One-day Elixirs are sold out. </p>
+                    <p id="day-puff">You spend half a day there with nothing sold out. </p>
+                    <p>“Shush —“, whisper an soft and anxious voice. You discover a girl wearing a gown hides behind you.</p>
+                    <p>Pretending nothing happened, you face back to the street.</p>
+                    <p>Several <span onclick="show('day1-4pic')">soldiers</span> with polished weapons pass you by.</p>
+                    <p id="day-elixir1">You turn to the girl, <span onclick="hide('day1-4-1');show('day1-5-1');show('day1-5-1a')">"Soldiers are gone."</span></p>
+                    <p id="day-puff1">You turn to the girl, <span onclick="hide('day1-4-1');show('day1-5-1');show('day1-5-2a')">"Soldiers are gone."</span></p>
+                </div>
+            </div>
+        </div>
+        <div id="day1-5-1" class="pages">
+            <div class="left-module">
+                <div id="day1-5pic">
+                </div>
+                <div id="day1-5pic2">
+                    <img src="./img/day1-5pic2.png">
+                </div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div id="day1-5-1a" class="day-text">
+                    <p>“Thanks … My name is Hedda. I am glad to meet you.” The girl says in a sweet tone.</p>
+                    <p>She has flowing golden curls and ivory skin. Her blue eyes, like the sea under summer sunlight, are clear and bright.</p><br><br>
+                    <a onclick="show('day1-5-1b');hide('day1-5-1a')">“I am Petra, Nice to meet you.”</a><br><br>
+                    <a onclick="relationadd('5');show('day1-5-1b');hide('day1-5-1a')">“You are so beautiful. I … I am Petra”</a>
+                </div>
+                <div id="day1-5-1b" class="day-text">
+                    <p>Hedda gives you a smile that just seems so genuinely sweet with just the right touch of shyness that unexpected warmth rushes through you.</p>
+                    <p>“So … what are you selling here?” she leans close, picks up a glass box and inhales the scent.</p><br><br>
+                    <a onclick="show('day1-5-1c');hide('day1-5-1b')">“Oh, take care. It’s a self-made One-night Elixir."</a><br><br>
+                    <a onclick="show('day1-5-1c');relationsub('1');hide('day1-5-1b')">“Don’t broke it, it’s self-made magic liquid. Super powerful.”</a>
+                </div>
+                <div id="day1-5-1c" class="day-text">
+                    <p>“Amazing! You know magic! You want to help people with your magic, right?” she is delighted.</p><br><br>
+                    <a onclick="relationsub('10');hide('day1-5-1c');show('day1-5-1d')">“No … not really, I just want to make some money.”</a><br><br>
+                    <a onclick="relationsub('20');hide('day1-5-1c');show('day1-5-1d1')">“Yeah, but my magic is limited, these are not true elixir.“</a>
+                </div>
 
-	<div id="day1-2" class="page">
-		<div class="left-module">
-			<div id="day1-2pic"></div>
-		</div>
-		<div class="mid-module"></div>
-		<div class="right-module">
-			<div id="day1-1title"></div>
-			<div class="day-text">
-				<p>Shelves crammed with glass jars of weird ingredients; a black pointed hat rests on a shabby broomstick; several cauldrons are still bubbling and steaming with self-stirring spoons. </p>
-				<p>You don’t know why she constantly bars you from learning witchery. Witchery is so compelling, you cannot prevent yourself from involving into this magical world. And your belief never change, you are destined to become a famous wizard.</p>
-				<p>You find out a worn witchery book, read it, then turn to a brewing cauldron.</p>
-				<p>You are going to <span onclick="hide('day1-2');show('day1-3')">make something magic</span>.</p>
-			</div>
-		</div>
-	</div>
+                <div id="day1-5-2a" class="day-text">
+                    <p>“Thanks … My name is Hedda. I am glad to meet you.” The girl says in a sweet tone.</p>
+                    <p>She has flowing golden curls and ivory skin. Her blue eyes, like the sea under summer sunlight, are clear and bright.</p><br><br>
+                    <a onclick="show('day1-5-2b');hide('day1-5-2a')">“I am Petra, Nice to meet you.”</a><br><br>
+                    <a onclick="relationadd('5');show('day1-5-2b');hide('day1-5-2a')">“You are so beautiful. I … I am Petra”</a>
+                </div>
 
-	<div id="day1-3" class="page">
-		
-	</div>
+                <div id="day1-5-2b" class="day-text">
+                    <p>Hedda gives you a smile that just seems so genuinely sweet with just the right touch of shyness that unexpected warmth rushes through you.</p>
+                    <p>“So … what are you selling here?” she leans close, picks up a glass box and stares at the Puffskein inside.</p><br><br>
+                    <a onclick="show('day1-5-2c');hide('day1-5-2b')">“Oh, take care. There are self-made Puffskein elfins.”</a><br><br>
+                    <a onclick="show('day1-5-2c');relationsub('1');hide('day1-5-2b')">“Don’t frighten them. They are self-made elfins. Super timid.”</a>
+                </div>
 
-	<div id="day1-4-1" class="page">
-		<div class="left-module">
-			<div id="day1-2pic"></div>
-		</div>
-		<div class="mid-module"></div>
-		<div class="right-module">
-			<div id="day1-1title"></div>
-			<div class="day-text">
-				<p>Shelves crammed with glass jars of weird ingredients; a black pointed hat rests on a shabby broomstick; several cauldrons are still bubbling and steaming with self-stirring spoons. </p>
-				<p>You don’t know why she constantly bars you from learning witchery. Witchery is so compelling, you cannot prevent yourself from involving into this magical world. And your belief never change, you are destined to become a famous wizard.</p>
-				<p>You find out a worn witchery book, read it, then turn to a brewing cauldron.</p>
-				<p>You are going to <span onclick="hide('day1-2');show('day1-3')">make something magic</span>.</p>
-			</div>
-		</div>
-	</div>
+                <div id="day1-5-2c" class="day-text">
+                    <p>“They are so cute. It’s amazing you have magic! How did you come up with this idea? You are so imaginative!” she is delighted.</p><br><br>
+                    <a onclick="relationsub('10');hide('day1-5-2c');show('day1-5-2d')">“I am not mean to … they are disasters, I cannot sell them out.”</a><br><br>
+                    <a onclick="hide('day1-5-2c');show('day1-5-2d')">“I am glad you like them. But not everyone has a same heart like you.”</a>
+                </div>
+
+                <div id="day1-5-2d" class="day-text">
+                    <p>“Oh, don’t talk like that. How about we set them free?”</p><br><br>
+                    <a id="day1-a" onclick="relationsub('1');show('day1-5-2da');hide('day1-b')">“Yeah, but they won’t live long, my magic is flawed.”</a><br><br>
+                    <a id="day1-b" onclick="relationadd('10');show('day1-5-2db')hide('day1-a')">“Why not! I am totally agree with you.“</a>
+                    <div id="day1-5-2da">
+                    	<p> “Don’t worry, at least they have freedom in their life.” Hedda lowers her head.</p>
+                    	<p>Clean up the stall, you ask</p><br>
+                    	<a onclick="show('day1-5-1e');hide('day1-5-2d')">“Why you hide for soldiers?”</a><br><br>
+                    	<a onclick="show('day1-5-1e');hide('day1-5-2d')">“Where are you come from?”</a><br><br>
+                    	<a onclick="relationadd('10');show('day1-5-1epp');hide('day1-5-2d')">“How about we hangout around after that, it’s festival day!”</a>
+                    </div>
+                    <div id="day1-5-2db">
+                    	<p>Clean up the stall, you ask</p><br>
+                    	<a onclick="show('day1-5-1e');hide('day1-5-2d')">“Why you hide for soldiers?”</a><br><br>
+                    	<a onclick="show('day1-5-1e');hide('day1-5-2d')">“Where are you come from?”</a><br><br>
+                    	<a onclick="relationadd('10');show('day1-5-1epp');hide('day1-5-2d')">“How about we hangout around after that, it’s festival day!”</a>
+                    </div>
+                </div>
+
+                <div id="day1-5-1d" class="day-text">
+                    <p>“Well, at least, you support yourself.” she replied.</p>
+                    <p>“That's true”, you proceed,</p><br><br>
+                    <a onclick="show('day1-5-1e');hide('day1-5-1d')">“Why you hide for soldiers?”</a><br><br>
+                    <a onclick="show('day1-5-1e');hide('day1-5-1d')">“Where are you come from?”</a><br><br>
+                    <a onclick="relationadd('10');show('day1-5-1epp');hide('day1-5-1d')">“How about we hangout around, it’s festival day!”</a>
+                </div>
+                <div id="day1-5-1d1" class="day-text">
+                    <p>“What? You cannot sell fake Elixirs. You are a liar.” she seems a little rattled. </p>
+                    <p><span onclick="relationadd('30');show('day1-5-1d1p')">“No, no, I am not a liar. I just want to help people as possible as I can. My magic is flawed. I can only make this happy potions to enlight people. I have tried.”</span>say you.</p>
+                    <div id="day1-5-1d1p">
+                    	<p>“I am sorry”, Hedda lowers her head.</p> 
+                    	<p>“Never mind”, you proceed,</p><br><br>
+                    	<a onclick="show('day1-5-1e');hide('day1-5-1d1')">“Why you hide for soldiers?”</a><br><br>
+                    	<a onclick="show('day1-5-1e');hide('day1-5-1d1')">“Where are you come from?”</a><br><br>
+                    	<a onclick="relationadd('10');show('day1-5-1epp');hide('day1-5-1d1')">“How about we hangout around, it’s festival day!”</a>
+                    </div>
+                </div>
+                <div id="day1-5-1e" class="day-text">
+                    <p>“I … I …Can I keep this as a secret.”  she looks down to ground and then up quickly, “How about we hangout around, it’s festival day!”</p>
+                    <p><span onclick="show('day1-5-1ep')">You nod.</span></p><br><br>
+                    <div id="day1-5-1ep">
+                    	<a>Go west to Lucid Gardens</a><br><br>
+                    	<a>Go east to Barter Bazaar</a>
+                    </div>
+                </div>
+                <div id="day1-5-1epp" class="day-text">
+                    <p>"Great idea!" she nods</p><br><br>
+                    <a>Go west to Lucid Gardens</a><br><br>
+                    <a>Go east to Barter Bazaar</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-	<script src="https://use.typekit.net/xrs4vde.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <div id="workshop">
+        <div id="instruction">
+            <label>Click and Drag your ingredients into the Cauldron.
+                <br>Click ‘Brew’ after you finish adding ingredients.</label>
+        </div>
+        <div id="witcherybook"></div>
+        <div class="items" id="rabbiteye"></div>
+        <div class="items" id="snaketongue"></div>
+        <div class="items" id="batwing"></div>
+        <div class="items" id="coral"></div>
+        <div class="items" id="octopusleg"></div>
+        <div class="items" id="lava"></div>
+        <div class="items-tag" id="rabbiteye-tag"></div>
+        <div class="items-tag" id="snaketongue-tag"></div>
+        <div class="items-tag" id="batwing-tag"></div>
+        <div class="items-tag" id="coral-tag"></div>
+        <div class="items-tag" id="octopusleg-tag"></div>
+        <div class="items-tag" id="lava-tag"></div>
+        <div id="things-used-to-brew">
+            <div id="cauldron"></div>
+            <div id="fire"></div>
+            <div id="brew-font"></div>
+        </div>
+        <div id="book-container" class="mask">
+            <div id="bookbg">
+                <div id="page-one" class="page">
+                    <div id="howtomake-title" class="book-title"></div>
+                    <ul id="howtomake-content">
+                        <li>Snakes tongue is poisonous. </li>
+                        <li>Corals induce temporary improvements in mental and physical function. </li>
+                        <li>Rabbit eye balls only work in the toxic condition. </li>
+                        <li>lava solidifying liquids. </li>
+                        <li>snake tongue and bat wings are mutually exclusive. </li>
+                        <li>octopus legs preserve the magic for one day long. </li>
+                        <li>Bat wings taste sweet.</li>
+                    </ul>
+                    <p id="howtomake-link" class="book-link">See what you can make</p>
+                </div>
+                <div id="page-two" class="page" style="display: none;">
+                    <div id="whatcanmake-title" class="book-title"></div>
+                    <ul id="things-to-make">
+                        <li id="book-elixir-text">One-day Elixir (stimulant)</li>
+                        <li id="book-puffskein-text">Puffskein Elfin</li>
+                    </ul>
+                    <div id="book-elixir"></div>
+                    <div id="book-puffskein"></div>
+                    <p id="whatcanmake-link" class="book-link" style="list-style: square;">See how to make</p>
+                </div>
+                <div id="cancel-icon-01"></div>
+            </div>
+        </div>
+        <div id="outcome-container" class="mask">
+            <div id="outcone-bg">
+                <div id="success">
+                    <img id="thing-won" src="./image/outcome/outcome-elixir.png">
+                    <p id="outcome-success-title">Congratulations! You made:</p>
+                    <img id="thing-won-text" src="./image/outcome/elixir-title.png">
+                    <p id="outcome-success-text">Today is castle celebration festival with endless free beer provided by the King. Everyone will be there celebrating. There will be great money
+                        <span id="sell-action" thing-to-sell='elixir'>selling</span> your <span id="full-name">One-day Elixir</span> there.</p>
+                </div>
+                <div id="empty">
+                    <div id="outcome-empty"></div>
+                    <p id="outcome-empty-title">Opps. You fail</p>
+                    <p id="outcome-empty-text">You can click and read witchery Book to learn how to make magical portions.</p>
+                    <div id="retry-button"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://use.typekit.net/xrs4vde.js"></script>
+    <script>
+    try {
+        Typekit.load({
+            async: true
+        });
+    } catch (e) {}
+    </script>
 </body>
+
 </html>
