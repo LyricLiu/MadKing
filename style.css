@@ -95,7 +95,7 @@ span :hover{
 	overflow: hidden;
 }
 
-#day1-1{
+.page{
 	height:100%;
 	width: 100%;
 }
@@ -146,6 +146,35 @@ span :hover{
 	width: 193px;
 	top:60px;
 	right:80px;
+}
+
+#day1-2pic{
+	background: url(./img/day1-witch.png);
+	width: 559px;
+	height: 348px;
+	position: absolute;
+	bottom: 100px;
+	margin-left:30px;
+}
+
+.day-text{
+	height: 500px;
+	position: absolute;
+	bottom: 20px;
+	width: calc(100% - 80px);
+	margin-left: 20px;
+}
+
+#day1-2{
+	display: none;
+}
+
+#day1-3{
+	display: none;
+}
+
+#day1-4-1{
+	display: none;
 }
 
 p:nth-child(1) {
