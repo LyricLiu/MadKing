@@ -1,0 +1,117 @@
+*{
+	margin:0;
+	border: 0;
+	font-family: faricy-new-web, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+html, body{
+    margin: 0;
+
+    padding: 0;
+
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 100%;
+    height: 100%;
+    max-height: 100%;
+
+    background-color: #373549;
+}
+
+p{
+	font-size: 20px;
+	margin-bottom: 20px;
+	color: #b7b9a7;
+}
+
+
+#relation{
+	position: fixed;
+	left:55px;
+	top:40px;
+	background: url(./img/love-tag.png);
+	width:158px;
+	height:66px;
+	overflow: hidden;
+	z-index: 6666;
+}
+
+#relation span{
+	position: absolute;
+	font:Futura Medium;
+	font-size: 40px;
+	color:#eec179;
+	margin-left:90px;
+	padding-top: 10px;
+}
+
+.left-module{
+	width:650px;
+	height:100%;
+	position: relative;
+	float: left;
+}
+
+.mid-module{
+	background-color: #404057;
+	width:60px;
+	height:100%;
+	position: relative;
+	float: left;
+}
+
+.right-module{
+	width: calc(100% - 710px);
+	height:100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#day1-1{
+	height:100%;
+	width: 100%;
+}
+
+#day1-1pic{
+	position: absolute;
+	background: url(./img/day1-door.png);
+	width:439px;
+	height:588px;
+	margin-left:50px;
+	bottom: 0;
+}
+
+#day1-mom{
+	position: absolute;
+	background: url(./img/day1-mom.png);
+	width:218px;
+	height:136px;
+	bottom: 380px;
+	left:350px;
+	display: none;
+}
+
+#day1-button{
+	position: absolute;
+	bottom: 0px;
+	left:310px;
+}
+
+#day1-button :hover{
+	width: 275px;
+	height: 181px;
+}
+
+#day1-1text{
+	height: 500px;
+	position: absolute;
+	bottom: 20px;
+	width: calc(100% - 70px);
+	margin-left: 20px;
+}
+
+
