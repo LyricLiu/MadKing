@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <title>Mad King - Flawed Magic</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="./script/jquery-3.1.1.min.js"></script>
-    <script src="./script/jquery-ui.min.js"></script>
-    <script src="./script/main.js"></script>
 </head>
 
 <body>
@@ -49,10 +46,13 @@
                     <p>Shelves crammed with glass jars of weird ingredients; a black pointed hat rests on a shabby broomstick; several cauldrons are still bubbling and steaming with self-stirring spoons. </p>
                     <p>You don’t know why she constantly bars you from learning witchery. Witchery is so compelling, you cannot prevent yourself from involving into this magical world. And your belief never change, you are destined to become a famous wizard.</p>
                     <p>You find out a worn witchery book, read it, then turn to a brewing cauldron.</p>
-                    <p>You are going to <span onclick="hide('day1-2');show('day1-4-1');show('day-puff');show('day-puff1')">make something magic</span>.</p>
+                    <p>You are going to <span onclick="hide('day1-2');hide('main');show('workshop')">make something magic</span>.</p>
                 </div>
             </div>
         </div>
+
+        <!--show('main')show('day1-4-1');show('day-puff');show('day-puff1')-->
+        <!--show('main')show('day1-4-1');show('day-elixir');show('day-elixir1')-->
 
         <div id="day1-4-1" class="pages">
             <div class="left-module">
@@ -60,6 +60,7 @@
                     <img src="./img/day1-3pic.png">
                 </div>
                 <div id="day1-4pic2"></div>
+                <div id="day1-4pic2a"></div>
             </div>
             <div class="mid-module"></div>
             <div class="right-module">
@@ -127,7 +128,7 @@
                 <div id="day1-5-2d" class="day-text">
                     <p>“Oh, don’t talk like that. How about we set them free?”</p><br><br>
                     <a id="day1-a" onclick="relationsub('1');show('day1-5-2da');hide('day1-b')">“Yeah, but they won’t live long, my magic is flawed.”</a><br><br>
-                    <a id="day1-b" onclick="relationadd('10');show('day1-5-2db')hide('day1-a')">“Why not! I am totally agree with you.“</a>
+                    <a id="day1-b" onclick="relationadd('10');show('day1-5-2db');hide('day1-a')">“Why not! I am totally agree with you.“</a>
                     <div id="day1-5-2da">
                     	<p> “Don’t worry, at least they have freedom in their life.” Hedda lowers her head.</p>
                     	<p>Clean up the stall, you ask</p><br>
@@ -217,7 +218,7 @@
                         <li>octopus legs preserve the magic for one day long. </li>
                         <li>Bat wings taste sweet.</li>
                     </ul>
-                    <p id="howtomake-link" class="book-link">See what you can make</p>
+                    <label id="howtomake-link" class="book-link">See what you can make</label>
                 </div>
                 <div id="page-two" class="page" style="display: none;">
                     <div id="whatcanmake-title" class="book-title"></div>
@@ -227,7 +228,7 @@
                     </ul>
                     <div id="book-elixir"></div>
                     <div id="book-puffskein"></div>
-                    <p id="whatcanmake-link" class="book-link" style="list-style: square;">See how to make</p>
+                    <label id="whatcanmake-link" class="book-link" style="list-style: square;">See how to make</label>
                 </div>
                 <div id="cancel-icon-01"></div>
             </div>
@@ -236,14 +237,14 @@
             <div id="outcone-bg">
                 <div id="success">
                     <img id="thing-won" src="./image/outcome/outcome-elixir.png">
-                    <p id="outcome-success-title">Congratulations! You made:</p>
+                    <label id="outcome-success-title">Congratulations! You made:</label>
                     <img id="thing-won-text" src="./image/outcome/elixir-title.png">
                     <p id="outcome-success-text">Today is castle celebration festival with endless free beer provided by the King. Everyone will be there celebrating. There will be great money
                         <span id="sell-action" thing-to-sell='elixir'>selling</span> your <span id="full-name">One-day Elixir</span> there.</p>
                 </div>
                 <div id="empty">
                     <div id="outcome-empty"></div>
-                    <p id="outcome-empty-title">Opps. You fail</p>
+                    <label id="outcome-empty-title">Opps. You fail</label>
                     <p id="outcome-empty-text">You can click and read witchery Book to learn how to make magical portions.</p>
                     <div id="retry-button"></div>
                 </div>
@@ -259,6 +260,9 @@
         });
     } catch (e) {}
     </script>
+    <script src="./script/jquery-3.1.1.min.js"></script>
+    <script src="./script/jquery-ui.min.js"></script>
+    <script src="./script/main.js"></script>
 </body>
 
 </html>

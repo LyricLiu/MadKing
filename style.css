@@ -217,6 +217,15 @@ span:hover{
 	height: 339px;
 }
 
+#day1-4pic2a{
+    background: url(./img/day1-3pic2b.png);
+    bottom: 60px;
+    margin-left:0;
+    position: absolute;
+    width: 628px;
+    height: 295px;
+}
+
 #day1-5-1{
 	display: none;
 }
@@ -263,7 +272,9 @@ span:hover{
 #day-puff,
 #day1-4-1,
 #day-elixir1,
-#day-puff1{
+#day-puff1,
+#day1-4pic2,
+#day1-4pic2a{
     display: none;
 }
 
@@ -463,6 +474,7 @@ p:nth-child(7) {
     top: 404px;
     left: 1058px;
     background: url(./image/octopusleg.png);
+    z-index:666;
 }
 
 #lava {
@@ -533,7 +545,7 @@ p:nth-child(7) {
 
 #bookbg {
     position: absolute;
-    top: 68px;
+    top: 30px;
     left: 170px;
     margin: 0 auto;
     width: 991px;
@@ -584,12 +596,13 @@ p:nth-child(7) {
     bottom: 72px;
     right: 100px;
     color: #c09034;
-    font-size: 38px;
+    font-size: 24px;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .book-link:hover {
-    text-decoration: underline;
+    color: #e49443;
 }
 
 #whatcanmake-title {
@@ -667,12 +680,19 @@ p:nth-child(7) {
 
 #outcome-success-text {
     position: absolute;
-    top: 402px;
+    top: 360px;
     left: 422px;
     width: 580px;
     color: #c09034;
     font-size: 22px;
     line-height: 38px;
+}
+
+#full-name{
+    font-weight: lighter;
+    text-decoration: none;
+    color: #c09034;
+    cursor: none;
 }
 
 #sell-action {

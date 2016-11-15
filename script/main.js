@@ -65,7 +65,7 @@ function relationsub(num){
             if (cookbook[i].ingredient.sort().toString() === thingsToBrew.sort().toString()) {
                 $('#success').show();
                 $('#thing-won').attr('src', './image/outcome/outcome-' + cookbook[i].result + '.png');
-                $('#thing-won-text').attr('src', '../image/outcome/' + cookbook[i].result + '-title.png');
+                $('#thing-won-text').attr('src', './image/outcome/' + cookbook[i].result + '-title.png');
                 $('#sell-action').attr('thing-to-sell', cookbook[i].result);
                 $('#full-name').html(cookbook[i].fullName);
                 $('#empty').hide();
@@ -98,12 +98,27 @@ function relationsub(num){
     $('#sell-action').click(function () {
         sell($(this).attr('thing-to-sell'));
     });
+
     $('#retry-button').click(function() {
         $('.items').show();
         thingsToBrew = [];
         $('#outcome-container').hide();
     });
     function sell(thing) {
-        console.log('selling', thing);
+        if(thing === 'elixir'){
+            hide('workshop');
+            show('main');
+            show('day1-4-1');
+            show('day-elixir');
+            show('day-elixir1');
+            show('day1-4pic2');
+        }else{
+            hide('workshop');
+            show('main');
+            show('day1-4-1');
+            show('day-puff');
+            show('day-puff1');
+            show('day1-4pic2a');
+        }
     }
 })();
