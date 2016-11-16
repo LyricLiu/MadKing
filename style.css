@@ -280,7 +280,6 @@ span:hover{
 }
 
 
-
 p:nth-child(1) {
     animation: fade-in 1s ease-in forwards;
     transform: translateY(1em);
@@ -428,6 +427,17 @@ p:nth-child(7) {
     display: none;
 }
 
+#brew-font:hover{
+    position: absolute;
+    top: 95px;
+    left: 119px;
+    width: 140px;
+    height: 96px;
+    background: url(./image/brew-font1.png);
+    cursor: pointer;
+    display: none;
+}
+
 #witcherybook {
     position: absolute;
     top: 482px;
@@ -436,6 +446,7 @@ p:nth-child(7) {
     height: 180px;
     background: url(./image/witcherybook.png);
     cursor: pointer;
+    animation: flash-in 1s infinite ease-in-out alternate;
 }
 
 .items,
@@ -699,7 +710,7 @@ p:nth-child(7) {
 
 #outcome-success-text {
     position: absolute;
-    top: 360px;
+    top: 365px;
     left: 422px;
     width: 580px;
     color: #c09034;
@@ -747,7 +758,7 @@ p:nth-child(7) {
 
 #outcome-empty-text {
     position: absolute;
-    top: 294px;
+    top: 270px;
     left: 429px;
     width: 490px;
     color: #c09034;
