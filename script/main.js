@@ -25,6 +25,10 @@ function relationsub(num){
     value.innerHTML = relationa.toString();
 }
 
+//var click1 = document.getElementById('click1');
+//click1.addEventListener("click",relationadd('5'), false);
+//click1.removeEventListener('click',relationadd('5'), false);
+
 
 (function () {
     var thingsToBrew = [];

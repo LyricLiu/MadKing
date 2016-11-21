@@ -45,7 +45,7 @@ a{
     color: #eec179;
     cursor: pointer;
     animation: come-in 1s ease-in forwards;
-    animation-delay: 1.8s;
+    animation-delay: 1.6s;
     opacity: 0;
 }
 
@@ -635,19 +635,21 @@ p:nth-child(7) {
 
 #things-to-make>li {
     position: absolute;
-    color: #c09034;
+    color: #538d6d;
     list-style: square;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 #book-elixir-text {
     top: 417px;
     left: 148px;
+    width:280px;
 }
 
 #book-puffskein-text {
-    top: 376px;
-    left: 658px;
+    top: 320px;
+    left: 600px;
+    width:280px;
 }
 
 #book-elixir {
@@ -661,7 +663,7 @@ p:nth-child(7) {
 
 #book-puffskein {
     position: absolute;
-    top: 141px;
+    top: 100px;
     left: 616px;
     width: 231px;
     height: 204px;
