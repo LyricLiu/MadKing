@@ -15,6 +15,8 @@ function relationadd(num){
     relation = parseInt(value.innerHTML);
     relationa = relation + num;
     value.innerHTML = relationa.toString();
+    numadd = '+' + num;
+    scoreAnim(numadd);
 }
 
 function relationsub(num){
@@ -23,7 +25,18 @@ function relationsub(num){
     relation = parseInt(value.innerHTML);
     relationa = relation - num;
     value.innerHTML = relationa.toString();
+    numadd = '-' + num;
+    scoreAnim(numadd);
 }
+
+function scoreAnim(num){
+    var bg = document.getElementById('score-pop');
+    var text = document.getElementById('re-text-add');
+    text.innerHTML = num;
+    bg.style.display = "block";
+    setTimeout(function(){ bg.style.display = "none";},3000);
+}
+
 
 //var click1 = document.getElementById('click1');
 //click1.addEventListener("click",relationadd('5'), false);

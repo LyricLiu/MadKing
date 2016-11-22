@@ -49,6 +49,30 @@ a{
     opacity: 0;
 }
 
+#score-pop{
+    animation: fade-in 0.5s ease-in forwards;
+    transform: translateY(1em);
+    opacity: 0;
+    position: absolute;
+    top:80px;
+    left:93px;
+    display: none;
+}
+
+#score-pop h2{
+    padding-top:23px;
+    padding-left:27px;
+    position: absolute;
+    z-index: 9999;
+    font-size: 30px;
+    letter-spacing:5px
+}
+
+#score-pop img{
+    position: absolute;
+}
+
+
 a:hover{
     color: #e49443;
 }
@@ -75,11 +99,14 @@ span:hover{
 	z-index: 6666;
 }
 
+h2{
+    font-size: 40px;
+    color:#eec179;
+}
+
 #re-text{
 	position: absolute;
 	font:Futura Medium;
-	font-size: 40px;
-	color:#eec179;
 	margin-left:90px;
 	padding-top: 8px;
 }
@@ -729,12 +756,8 @@ p:nth-child(7) {
 
 #sell-action {
     cursor: pointer;
-    color: #d88e5d;
 }
 
-#sell-action:hover {
-    text-decoration: underline;
-}
 
 #success, #empty {
     display: none;
