@@ -215,6 +215,14 @@ h2{
 	margin-left: 20px;
 }
 
+.day-text-left{
+    height: 520px;
+    position: absolute;
+    top: 200px;
+    width: 550px;
+    margin-left: 40px;
+}
+
 #day1-2{
 	display: none;
 }
@@ -274,14 +282,44 @@ h2{
 	animation: fade-in 0.5s ease-in forwards;
 }
 
-#day1-5-1b{
-    display: none;
+#day1-6pic1{
+    background: url(./img/day1-6pic1.png);
+    bottom: 100px;
+    margin-left:0px;
+    position: absolute;
+    width: 660px;
+    height: 358px;
 }
 
-#day1-5-1c{
-    display: none;
+#day1-6pic2{
+    background: url(./img/day1-6pic2.png);
+    bottom: 70px;
+    margin-left:10px;
+    position: absolute;
+    width: 636px;
+    height: 447px;
 }
 
+#day1-7pic{
+    background: url(./img/day1-7pic.png);
+    bottom: 70px;
+    margin-left:40px;
+    position: absolute;
+    width: 542px;
+    height: 384px;
+}
+
+#day2-1title{
+    height: 81px;
+    background: url(./img/day2-title.png);
+    position: absolute;
+    width: 202px;
+    top:60px;
+    right:80px;
+}
+
+#day1-5-1b,
+#day1-5-1c,
 #day1-5-1d,
 #day1-5-1d1,
 #day1-5-1e,
@@ -302,7 +340,16 @@ h2{
 #day-elixir1,
 #day-puff1,
 #day1-4pic2,
-#day1-4pic2a{
+#day1-4pic2a,
+#day1-6-1b,
+#day1-6-2b,
+#day1-7pic,
+#day1-7-1,
+#day1-7-2,
+#day1-7-3,
+#day1-7,
+#day1-6-2,
+#day1-6-1{
     display: none;
 }
 

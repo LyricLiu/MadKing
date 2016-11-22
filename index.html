@@ -170,16 +170,119 @@
                 </div>
                 <div id="day1-5-1epp" class="day-text">
                     <p>"Great idea!" she nods</p><br><br>
-                    <a>Go west to Lucid Gardens</a><br><br>
-                    <a>Go east to Barter Bazaar</a>
+                    <a onclick="hide('day1-5-1');show('day1-6-1')">Go west to Lucid Gardens</a><br><br>
+                    <a onclick="hide('day1-5-1');show('day1-6-2')">Go east to Barter Bazaar</a>
                 </div>
             </div>
         </div>
+        <div id="day1-6-1" class="pages">
+            <div class="left-module">
+                <div id="day1-6pic1"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div id="day1-6-1a" class="day-text">
+                    <p>The garden is a haven of stillness amid the noise and bustle of the streets outside. The bonsai trees lined the perfect lawn around several delicate pavilions. In the center there was a hedge maze with flowering lily pads.</p>
+                    <p>You and Hedda walk along the rocky path chatting over the new castle of the King.</p>
+                    <p>...</p><br><br>
+                    <a onclick="hide('day1-6-1a');show('day1-6-1b')">You spent a whole afternoon together.</a>
+                </div>
+                <div id="day1-6-1b" class="day-text">
+                    <p>As the light drains away there is barely enough even for shadows, It’s time to leave.</p>
+                    <p>“I have to go home now.” Hedda says reluctantly.</p><br><br>
+                    <a onclick="hide('day1-6-1');show('day1-7');show('day1-7-1');relationadd('10')">Sent her a gift</a><br><br><br>
+                    <a onclick="hide('day1-6-1');show('day1-7');show('day1-7-2');relationadd('5')">Walk her home</a><br><br><br>
+                    <a onclick="hide('day1-6-1');show('day1-7');show('day1-7-3');relationsub('-10')">Say goodbye to her</a>
+                </div>
+            </div>
+        </div>
+        <div id="day1-6-2" class="pages">
+            <div class="left-module">
+                <div id="day1-6pic2"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div id="day1-6-2a" class="day-text">
+                    <p>The footpaths are crowded with stalls selling backed goods, fresh fruits, home-made trinkets, pot plants and herbs. This is the Barter Bazaar, a place which is always drowning in the sea of people.</p>
+                    <p>You and Hedda move between stall holders who are hollering out their special deals.</p>
+                    <p>Hedda is extremely excited as if she had never been there before.</p>
+                    <p>...</p><br><br>
+                    <a onclick="hide('day1-6-2a');show('day1-6-2b')">You spent a whole afternoon together.</a>
+                </div>
+                <div id="day1-6-2b" class="day-text">
+                    <p>The daylight has dwindled to a barely perceptible lightening of the gloom. Stall holders clean their wares one after another. </p>
+                    <p>“I have to go home now.” Hedda says reluctantly.</p><br><br>
+                    <a onclick="hide('day1-6-2');show('day1-7');show('day1-7-1');relationadd('10')">Sent her a gift</a><br><br><br>
+                    <a onclick="hide('day1-6-2');show('day1-7');show('day1-7-2');relationadd('5')">Walk her home</a><br><br><br>
+                    <a onclick="hide('day1-6-2');show('day1-7');show('day1-7-2');relationsub('-10')">Say goodbye to her</a>
+                </div>
+            </div>
+        </div>
+        <div id="day1-7" class="pages">
+            <div class="left-module">
+                <div id="day1-7pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div class="day-text">
+                    <div id="day1-7-1">
+                        <p> “Hedda, wait.” you hurry, “before you leave, can I sent you a gift.” You come up with a silver <span onclick="show('day1-7pic')">bracelet</span> with four inlaid gemstones.</p>
+                        <p>“It’s amazingly beautiful.” Hedda exclaims, but next moment, she frowns, “Why there is a hollow there, something is lost?”</p>
+                        <p>“No, that is something I have never found yet. It’s a magic bracelet, my mom told me if I collected all five gemstones, the magic will show.”</p>
+                        <p>“I will keep it well.” she smiles, “hope we could meet again.”</p>
+                        <p>“We will. Goodbye, Hedda” you wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
+                    </div>
+                    <div id="day1-7-2">
+                        <p>”Can I walk you home?” you ask.</p>
+                        <p>“Oh, sorry, I am afraid … my dad…” she murmurs.</p>
+                        <p>“Understand.” you smile. “before you leave, can I sent you a gift.” You come up with a silver <span onclick="show('day1-7pic')">bracelet</span> with four inlaid gemstones.</p>
+                        <p>“It’s amazingly beautiful.” Hedda exclaims, but next moment, she frowns, “Why there is a hollow there, something is lost?”</p>
+                        <p>“No, that is something I have never found yet. It’s a magic bracelet, my mom told me if I collected all five gemstones, the magic will show.”</p>
+                        <p>“I will keep it well.” she smiles, “hope we could meet again.”</p>
+                        <p>“We will. Goodbye, Hedda” you wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
+                    </div>
+                    <div id="day1-7-3">
+                        <p>“Well. Goodbye, Hedda” you wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--day2-->
+        <!--day2-->
+        <!--day2-->
+        <div id="day2-1" class="pages">
+            <div class="left-module">
+                <div class="day-text-left">
+                    <p>When you wake up in the morning to find your mom is still absent.</p>
+                    <p>You decide to:</p><br><br>
+                    <a>sneak into her workshop</a><br><br><br>
+                    <a>hangout to have fun</a><br><br><br>
+                    <a>explore the King’s new castle</a>
+                </div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day2-1title"></div>
+                <div class="day-text">
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     </div>
 
 
 
-
+<!--workshop module-->
+<!--workshop module-->
+<!--workshop module-->
     <div id="workshop">
         <div id="instruction">
             <label>Click and Drag your ingredients into the Cauldron.
