@@ -372,6 +372,15 @@ h2{
     height: 450px;
 }
 
+#day2-3pic{
+    background: url(./img/day2-5.png);
+    bottom: 40px;
+    margin-left:10px;
+    position: absolute;
+    width: 624px;
+    height: 469px;
+}
+
 #day1-5-1b,
 #day1-5-1c,
 #day1-5-1d,
@@ -408,6 +417,7 @@ h2{
 #day1-6-2,
 #day1-6-1,
 #day2-1,
+#day2-2,
 #day2-1-1,
 #day2-1-2,
 #day2-1-3,
