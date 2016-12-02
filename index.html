@@ -45,7 +45,7 @@
                 <div id="day1-1title"></div>
                 <div class="day-text">
                     <p>Shelves crammed with glass jars of weird ingredients; a black pointed hat rests on a shabby broomstick; several cauldrons are still bubbling and steaming with self-stirring spoons. </p>
-                    <p>You don’t know why she constantly bars you from learning witchcraft. Witchcraft is so compelling, you cannot prevent yourself from involving into this magical world. And your belief never change, you are destined to become a famous wizard.</p>
+                    <p>You don’t know why she constantly bars you from learning witchcraft. Witchcraft is so compelling, you cannot prevent yourself from exploring into this magical world. And your belief never changes, you are destined to become a famous wizard.</p>
                     <p>You find out a worn witchery book, read it, then turn to a brewing cauldron.</p>
                     <p>You are going to <a onclick="hide('day1-2');hide('main');show('workshop')">make something magic</a>.</p>
                 </div>
@@ -255,19 +255,56 @@
         <!--day2-->
         <div id="day2-1" class="pages">
             <div class="left-module">
-                <div class="day-text-left">
+                <div class="day-text-left" id="day2-1-0">
                     <p>When you wake up in the morning to find your mom is still absent.</p>
                     <p>You decide to:</p><br><br>
-                    <a>sneak into her workshop</a><br><br><br>
-                    <a>hangout to have fun</a><br><br><br>
-                    <a>explore the King’s new castle</a>
+                    <a onclick="show('day2-1-1')">sneak into her workshop</a><br><br><br>
+                    <a onclick="show('day2-1-2')">hangout to have fun</a><br><br><br>
+                    <a onclick="show('day2-1-3')">explore the King’s new castle</a>
                 </div>
+                <div id="day2-1pic"></div>
             </div>
             <div class="mid-module"></div>
             <div class="right-module">
                 <div id="day2-1title"></div>
                 <div class="day-text">
-                    
+                    <div id="day2-1-1">
+                        <p>“What shall I make today?” you ask yourself while turning a witchery book page after page.</p>
+                        <p>A Witchcraft catches your eye — <span onclick="hide('day2-1-0');show('day2-1-4');show('day2-1pic')">“How to transfer into a bird?”</span></p>
+                    </div>
+                    <div id="day2-1-2">
+                        <p>“What’s up for today?” you ask yourself and suddenly you have a good idea, you decide to explore the Mad King’s castle.</p>
+                        <p>You walk into your mom’s workshop to find out a way that allows you to sneak into the castle secretly.</p>
+                        <p>Ten minutes later, a page from a witchery book catches your eye — <span onclick="hide('day2-1-0');show('day2-1-4');show('day2-1pic')">“How to transfer into a bird?”</span></p>
+                    </div>
+                    <div id="day2-1-3">
+                        <p>“How can I sneak into the Mad King’s castle?” you ask yourself and suddenly you have a good idea, you decide to find out a magic in your mom’s workshop.</p>
+                        <p>Ten minutes later, a page from a witchery book catches your eye — <span onclick="hide('day2-1-0');show('day2-1-4');show('day2-1pic')">“How to transfer into a bird?”</span></p>
+                    </div>
+                    <div id="day2-1-4">
+                        <p>You follow it.</p>
+                        <p>Next moment, you find yourself <a onclick="hide('day2-1');show('day2-2')">turn into a bird</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day2-2" class="pages">
+            <div class="left-module">
+                <div id="day2-2-1pic"></div>
+                <div id="day2-2-2pic"></div>
+                <div id="day2-2-3pic"></div>
+                <div id="day2-2-4pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day2-1title"></div>
+                <div class="day-text">
+                    <p>You <span onclick="hide('day2-2-1pic');show('day2-2-2pic')">fly</span> out of your home <span onclick="hide('day2-2-2pic');show('day2-2-3pic')">towards the castle</span>.</p>
+                    <p>It is when you <span onclick="hide('day2-2-3pic');show('day2-2-4pic')">past a high tower</span>, you see a girl crouched against the widow with pearl-shaped tears rolling down her cheeks from wide luminous eye.</p>
+                    <p>“Dad, you promised me, you promised me not to be mad. You know, your madness hurts me, hurts your people, hurts yourself. I cannot ignore your pain under your madness. I don’t know what I can do for you.”</p>
+                    <p>It’s Hedda. </p>
+                    <a>You land on the widow-sill silently not to disturb her</a></br></br></br>
+                    <a>You battle your wings to arouse her attention</a>
                 </div>
             </div>
         </div>
