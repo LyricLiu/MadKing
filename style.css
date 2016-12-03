@@ -381,6 +381,24 @@ h2{
     height: 469px;
 }
 
+#day2-4pic{
+    background: url(./img/day2-6.png);
+    bottom: 0px;
+    margin-left:10px;
+    position: absolute;
+    width: 483px;
+    height: 558px;
+}
+
+#day2-4pic2{
+    background: url(./img/day2-7.png);
+    bottom: 50px;
+    margin-left:0px;
+    position: absolute;
+    width: 664px;
+    height: 470px;
+}
+
 #day1-5-1b,
 #day1-5-1c,
 #day1-5-1d,
@@ -430,7 +448,11 @@ h2{
 #day2-2-2,
 #day2-2-3,
 #day2-2-4,
-#day2-2-5{
+#day2-2-5,
+#day2-4pic2,
+#day2-4-2,
+#day2-4-3,
+#day2-4{
     display: none;
 }
 
