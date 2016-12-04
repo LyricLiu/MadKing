@@ -366,10 +366,10 @@ h2{
 #day2-2-5pic{
     background: url(./img/day2-4.png);
     bottom: 50px;
-    margin-left:20px;
+    margin-left:30px;
     position: absolute;
-    width: 640px;
-    height: 450px;
+    width: 556px;
+    height: 457px;
 }
 
 #day2-3pic{
@@ -396,6 +396,24 @@ h2{
     margin-left:0px;
     position: absolute;
     width: 664px;
+    height: 470px;
+}
+
+#day2-5pic{
+    background: url(./img/day2-7-0.png);
+    bottom: 0px;
+    margin-left:60px;
+    position: absolute;
+    width: 534px;
+    height: 545px;
+}
+
+#day2-6pic{
+    background: url(./img/day2-8.png);
+    bottom: 50px;
+    margin-left:20px;
+    position: absolute;
+    width: 610px;
     height: 470px;
 }
 
@@ -452,7 +470,12 @@ h2{
 #day2-4pic2,
 #day2-4-2,
 #day2-4-3,
-#day2-4{
+#day2-4,
+#day2-6-1,
+#day2-6-2,
+#day2-5,
+#day2-6,
+#day2-3{
     display: none;
 }
 
