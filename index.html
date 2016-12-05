@@ -211,10 +211,10 @@
                     <br>
                     <br>
                     <div id="day1-5-1ep">
-                        <a>Go west to Lucid Gardens</a>
+                        <a onclick="hide('day1-5-1');show('day1-6-1')">Go west to Lucid Gardens</a>
                         <br>
                         <br>
-                        <a>Go east to Barter Bazaar</a>
+                        <a onclick="hide('day1-5-1');show('day1-6-2')">Go east to Barter Bazaar</a>
                     </div>
                 </div>
                 <div id="day1-5-1epp" class="day-text">
@@ -312,10 +312,10 @@
                         <p>”Can I walk you home?” you ask.</p>
                         <p>“Oh, sorry, I am afraid … my dad…” she murmurs.</p>
                         <p>“Understand.” you smile. “before you leave, can I sent you a gift.” You come up with a silver <span onclick="show('day1-7pic')">bracelet</span> with four inlaid gemstones.</p>
-                        <p>“It’s amazingly beautiful.” Hedda exclaims, but next moment, she frowns, “Why there is a hollow there, something is lost?”</p>
-                        <p>“No, that is something I have never found yet. It’s a magic bracelet, my mom told me if I collected all five gemstones, the magic will show.”</p>
+                        <p>“It’s amazingly beautiful, but why there is a hollow there, something is lost?”</p>
+                        <p>“No, that is something I have never found yet. It’s a magic bracelet, if all five gemstones are collected, the magic will show.”</p>
                         <p>“I will keep it well.” she smiles, “hope we could meet again.”</p>
-                        <p>“We will. Goodbye, Hedda” you wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
+                        <p>You wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
                     </div>
                     <div id="day1-7-3">
                         <p>“Well. Goodbye, Hedda” you wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
@@ -434,12 +434,12 @@
             </div>
             <div class="mid-module"></div>
             <div class="right-module">
-                <div id="day1-2title"></div>
+                <div id="day2-1title"></div>
                 <div class="day-text">
                     <p>You carry Hedda out of the castle towards your home to ask for help from your mom. You told Hedda your mom is a witch and the crystal ball magic could help Hedda find out the reason for her father’s madness.</p>
                     <p>Hedda followed your advice and now she is holding your clothes firmly escaping from the castle room. </p>
                     <p>With only one wing to fly, you have to gather all your strength to make a balance.</p>
-                    <p>You could smell the aroma of the grass, you are close to the land. </p>
+                    <p>You smell the aroma of the grass, you are close to the land. </p>
                     <p>But suddenly, you feel you cannot lift the weight anymore.</p>
                     </br>
                     <a onclick="hide('day2-3');show('day2-4')">all your magic is expired now.</a>
@@ -453,7 +453,7 @@
             </div>
             <div class="mid-module"></div>
             <div class="right-module">
-                <div id="day1-2title"></div>
+                <div id="day2-1title"></div>
                 <div class="day-text">
                     <div id="day2-4-1">
                         <p>You and Hedda plummet down, down, down. The air scramble past you and your heart leaps and begins charging at your chest.</p>
@@ -461,7 +461,7 @@
                         </br>
                         <a onclick="hide('day2-4-1');show('day2-4-2');hide('day2-4pic');show('day2-4pic2');relationadd('5')">“I have to save Hedda”, you tell yourself.</a></br>
                         </br>
-                        <a onclick="hide('day2-4-1');show('day2-4-3');relationsub('-20')">“Damn it!”, you shout.</a>
+                        <a onclick="hide('day2-4-1');show('day2-4-3');relationsub('20')">“Damn it!”, you shout.</a>
                     </div>
                     <div id="day2-4-2">
                         <p>You struggle in air to hold Hedda firmly. At last, you hear a hard thud, a gasp.</p>
@@ -487,7 +487,7 @@
             </div>
             <div class="mid-module"></div>
             <div class="right-module">
-                <div id="day1-2title"></div>
+                <div id="day2-1title"></div>
                 <div class="day-text">
                     <p>When you and Hedda arrive at your mom’s workshop, she is tinkering with her crooked cauldron.</p>
                     <p>“You damn lousy kid!” exclaims your mom, “Look at what you did!” </p>
@@ -504,7 +504,7 @@
             </div>
             <div class="mid-module"></div>
             <div class="right-module">
-                <div id="day1-2title"></div>
+                <div id="day2-1title"></div>
                 <div class="day-text">
                     <div id="day2-6-0">
                         <p>“Come with me.” Ms. Katharina comes out of a crystal ball, asks Hedda put her hand on it and speaks out spells.</p>
@@ -531,12 +531,71 @@
                 </div>
             </div>
         </div>
-
-
+        <!--day3-->
+        <!--day3-->
+        <div id="day3-1" class="pages">
+            <div class="left-module">
+                <div class="day-text-left">
+                    <p>“If Hedda is a princess, her father must be the King. From Hedda’s words, her father might be enchanted to be madness. Mom detests Hedda. How she knows Hedda?</p>
+                    <p>No, Hedda hasn’t come out of the castle before. What if mom knows anyone else related to Hedda? Mom knows magic. Might there be a link between mom and the King?”</p>
+                </div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day3-1title"></div>
+                <div class="day-text">
+                    <p>You spent whole nights thinking.</p>
+                    <p>“You damn lousy kid!” exclaims your mom, “Look at what you did!” </p>
+                    <p>Near Dawn, you cannot help finding the answers.</p>
+                    <p>You creep down to the secret basement.</p>
+                    <p>The basement door which you had so often tried in vain to open, stood ajar. </p></br>
+                    <a onclick="hide('day3-1');hide('main');show('day3-2')">You step into the room.</a>
+                </div>
+            </div>
+        </div>
+        
 
 
     </div>
-    <!--workshop module-->
+    <!--workshop module2-->
+    <div id="day3-2">
+        <div id="secret-box" onclick="show('day3-2-1');show('day3-2-1-1');hide('day3-2-1-2');hide('day3-2-1-3')"></div>
+        <div id="secret-letter" onclick="show('day3-2-1');show('day3-2-1-2');hide('day3-2-1-1');hide('day3-2-1-3')"></div>
+        <div id="secret-pillow" onclick="show('day3-2-1');show('day3-2-1-3');hide('day3-2-1-1');hide('day3-2-1-2')"></div>
+        <div id="day3-2-1">
+            <div id="secret-pop">
+                <div id="day3-2-1-1">
+                    <div id="secret-magic"></div>
+                    <div class="secret-text">
+                        <p>An ordinary box. But wait. There is a note here: </p>
+                        <p>"A magic stone to help you manipulate other’s mind. </p>
+                        <p>Put your hand on it with one’s name in mind and speak out the spell…"</p>
+                        <p>But where is that stone?</p></br>
+                        <a onclick="hide('day3-2');show('day3-3')">Step out of the room</a></br></br>
+                        <a onclick="hide('day3-2-1')">Explore further</a>
+                    </div>
+                </div>
+                <div id="day3-2-1-2">
+                    <div id="secret-read"></div>
+                    <div class="secret-text">
+                        <p>Dear Katharina,</p>
+                        <p>I love you. That means I would defend you with my life even if the odds were insurmountable. It means I will dance and rejoice with you when times are good. It means I will never betray you, never give up on you. Your magic will assist me to be the King, you will share my honor. You will be the Queen. </p></br>
+                        <a onclick="hide('day3-2');show('day3-3')">Step out of the room</a></br></br>
+                        <a onclick="hide('day3-2-1')">Explore further</a>
+                    </div>
+                </div>
+                <div id="day3-2-1-3">
+                    <div id="secret-voodoo"></div>
+                    <div class="secret-text">
+                        <div id="voodoo-text"></div>
+                        <p>It’s Voodoo. Someone might be cursed. But who?</p></br>
+                        <a onclick="hide('day3-2');show('day3-3')">Step out of the room</a></br></br>
+                        <a onclick="hide('day3-2-1')">Explore further</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--workshop module-->
     <!--workshop module-->
     <div id="workshop">
