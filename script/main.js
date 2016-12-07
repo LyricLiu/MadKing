@@ -1,3 +1,5 @@
+var known = false;
+
 function show(a){
     var a = document.getElementById(a);
     a.style.display = "block";
@@ -8,6 +10,9 @@ function hide(a){
     a.style.display = "none";
 }
 
+function setKnown(){
+    known = true;
+}
 
 function relationadd(num){
     var value = document.getElementById('re-text');
