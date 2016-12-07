@@ -578,7 +578,11 @@
                         <p>“I should tell all these to Hedda, she might know more than I am. But where to find her?” you wonder.</p>
                         <p>Soon you have a good idea. You come out of a magic ball to <span onclick="Twosecond()">scry</span> where she is.</p>
                         <p>“Oh, damn it!” you exclaim. Your magic only last for 2 seconds.</p>
-                        <p>You guess, she might be </br></br><a onclick="show('day3-4');hide('day3-3')">in the woods</a>; <a onclick="relationsub('20')">in the castle</a>; <a onclick="relationsub('20')">in the Lucid Garden</a></p>
+                        <p>You guess, she might be </br></br><a onclick="show('day3-3-3')">in the woods</a>; <a onclick="relationsub('20')">in the castle</a>; <a onclick="relationsub('20')">in the Lucid Garden</a></p>
+                        <div id="day3-3-3">
+                            <p>“She is in the woods! Why she is there?” you feel something bad happened and hurry out</p></br>
+                            <a onclick="show('day3-4');hide('day3-3')">into the woods.</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -593,22 +597,72 @@
                 <p>Mrs. Hernandez gets mad and ties you up with magical robe.</p>
             </div>
         </div>
-
-
         <div id="day3-4" class="pages">
             <div class="left-module">
                 <div id="day3-4pic"></div>
+                <div id="day3-4pic2"></div>
             </div>
             <div class="mid-module"></div>
             <div class="right-module">
                 <div id="day3-1title"></div>
                 <div class="day-text">
-                    <p>When you and Hedda arrive at your mom’s workshop, she is tinkering with her crooked cauldron.</p>
+                    <div id="day3-4-1">
+                        <p>“Hedda, where are you!” you call through the woods and finally find Hedda there huddled up against a tree.</p>
+                        <p>She is lost and has stayed in the woods for the whole night.</p></br>
+                        <a onclick="show('day3-4-2');hide('day3-4-1');relationadd('10')">“Hedda, it’s my fault.” you crush her in arms.</a></br></br>
+                        <a onclick="show('day3-4-3');hide('day3-4-1');relationadd('5')">“Hedda, has anything hurts you?” you lean towards her.</a>
+                    </div>
+                    <div id="day3-4-2">
+                        <p>For five whole minutes you hold her in arms and kiss her again and again. She looks at your face and then bursts into tears.</p>
+                        <p>“I know you will come.” Hedda cries.</p>
+                        <p>After Hedda wiped her eyes dry, you <a onclick="show('day3-4-4');hide('day3-4-2')">tell everything</a> you find in the basement to her.</p>
+                    </div>
+                    <div id="day3-4-3">
+                        <p>She looks at your face and then bursts into tears.</p>
+                        <p>“I know you will come.” Hedda cries.</p>
+                        <p>After Hedda wiped her eyes dry, you <a onclick="show('day3-4-4');hide('day3-4-2');hide('day3-4-3')">tell everything</a> you find in the basement to her.</p>
+                    </div>
+                    <div id="day3-4-4">
+                        <p>“So, Ms. Katharina and my father are former lovers.” Hedda is astonished, “and she helped my father plot!”</p>
+                        <p>“I guess so, from the letter.” you say, “and I see a voodoo and an empty box used to contain a magic stone.”</p>
+                        <p>“It’s so strange. I cannot believe.” she stops and then proceeds, “we should find it out in the castle.”</p>
+                        <p>“It’s too late, we should stay here tonight”” you say.</p>
+                        <p>"You are right." Hedda says. The chilly wind makes her shiver.</p></br>
+                        <a onclick="show('day3-4-5');hide('day3-4-4');relationadd('5')">You threw your cloak around Hedda</a></br></br>
+                        <a onclick="show('day3-4-6');hide('day3-4-4');show('day3-4pic2');hide('day3-4pic');relationsub('10')">You create a bonfire for Hedda through magic</a>
+                    </div>
+                    <div id="day3-4-5">
+                        <p>“You must be cold”, you threw your cloak around Hedda and hold her in your arms.</p>
+                        <p>“Thanks, It’s so nice to have you with me.” Hedda smiles.</p>
+                        <p>You and Hedda stay there the whole night, just like that, eventually <a onclick="show('day4-1');hide('day3-4')">falling asleep</a>.</p>
+                    </div>
+                    <div id="day3-4-6">
+                        <p>You touch a piece of wood with your left hand and speak a spell.</p>
+                        <p>The whole world is illuminated.</p>
+                        <p>Suddenly, Hedda’s cream cut your complacency. Her dress caught on fire owing the uncontrolled bonfire.</p>
+                        <p>You hasten to put out the fire with your cloak, “Sorry, I just, my magic…”.</p>
+                        <p>Hedda shakes her head and smiles.</p>
+                        <p>You and Hedda stay there the whole night, just like that, eventually <a onclick="show('day4-1');hide('day3-4')">falling asleep</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--day4-->
+        <!--day4-->
+        <div id="day4-1" class="pages">
+            <div class="left-module">
+                
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day4-1title"></div>
+                <div class="day-text">
+                    <p>You spent whole nights thinking.</p>
                     <p>“You damn lousy kid!” exclaims your mom, “Look at what you did!” </p>
-                    <p>“Ms. Katharina” — Your mom stops bumping you on the head with her broom when she hears a soft voice coming from a beautiful girl.</p>
-                    <p>“Oh, you are?” Ms. Katharine asks.</p>
-                    <p>“I am Hedda, Petra’s friend. I am here to ask for your help.” Hedda says sincerely.</p>
-                    <p>You <a onclick="hide('day2-5');show('day2-6')">tell everything to your mom</a></p>
+                    <p>Near Dawn, you cannot help finding the answers.</p>
+                    <p>You creep down to the secret basement.</p>
+                    <p>The basement door which you had so often tried in vain to open, stood ajar. </p></br>
+                    <a onclick="hide('day3-1');hide('main');show('day3-2')">You step into the room.</a>
                 </div>
             </div>
         </div>

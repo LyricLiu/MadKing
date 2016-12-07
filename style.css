@@ -557,6 +557,33 @@ h2{
     position: absolute;
 }
 
+#day3-4pic{
+    background: url(./img/day3-2.png);
+    width: 605px;
+    height: 428px;
+    bottom:50px;
+    left:30px;
+    position: absolute;
+}
+
+#day3-4pic2{
+    background: url(./img/day3-5.png);
+    width: 605px;
+    height: 428px;
+    bottom:50px;
+    left:30px;
+    position: absolute;
+}
+
+#day4-1title{
+    height: 81px;
+    background: url(./img/day4-title.png);
+    position: absolute;
+    width:215px;
+    top:60px;
+    right:80px;
+}
+
 
 
 
@@ -629,11 +656,20 @@ h2{
 #day3-2-1,
 #day3-2,
 #day3-1,
+#day3-4,
+#day3-3,
 #day3-3-2,
 #day3-3-1,
 #day3-end,
 #day3-3-1pic,
-#day3-3-2pic{
+#day3-3-2pic,
+#day3-3-3,
+#day3-4-2,
+#day3-4-3,
+#day3-4-4,
+#day3-4-5,
+#day3-4-6,
+#day3-4pic2{
     display: none;
 }
 
