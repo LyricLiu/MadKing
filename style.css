@@ -593,6 +593,15 @@ h2{
     position: absolute;
 }
 
+#day4-2pic{
+    background: url(./img/day4-2.png);
+    width: 526px;
+    height: 463px;
+    bottom:30px;
+    left:60px;
+    position: absolute;
+}
+
 
 
 
