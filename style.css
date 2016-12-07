@@ -401,11 +401,11 @@ h2{
 
 #day2-5pic{
     background: url(./img/day2-7-0.png);
-    bottom: 0px;
-    margin-left:60px;
+    bottom: 50px;
+    margin-left:30px;
     position: absolute;
-    width: 534px;
-    height: 545px;
+    width: 561px;
+    height: 445px;
 }
 
 #day2-6pic{
