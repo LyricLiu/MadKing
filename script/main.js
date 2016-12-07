@@ -37,6 +37,13 @@ function scoreAnim(num){
     setTimeout(function(){ bg.style.display = "none";},3000);
 }
 
+function Twosecond(){
+    var pic = document.getElementById('day3-3-1pic');
+    pic.style.display = "block";
+    setTimeout(function(){ pic.style.display = "none";},2000);
+
+}
+
 
 //var click1 = document.getElementById('click1');
 //click1.addEventListener("click",relationadd('5'), false);

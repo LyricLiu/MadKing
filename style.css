@@ -527,7 +527,35 @@ h2{
     right:80px;
 }
 
+#end-title{
+    background: url(./img/story-end.png);
+    width: 232px;
+    height: 81px;
+    margin-top: 20px;
+}
 
+#end1{
+    margin:40px;
+    margin-top:100px;
+}
+
+#day3-3-2pic{
+    background: url(./img/day3-1-0.png);
+    width: 563px;
+    height: 562px;
+    bottom:20px;
+    left:5px;
+    position: absolute;
+}
+
+#day3-3-1pic{
+    background: url(./img/day3-1.png);
+    width: 335px;
+    height: 237px;
+    bottom:160px;
+    left:100px;
+    position: absolute;
+}
 
 
 
@@ -600,7 +628,12 @@ h2{
 #day3-2-1-2,
 #day3-2-1,
 #day3-2,
-#day3-1{
+#day3-1,
+#day3-3-2,
+#day3-3-1,
+#day3-end,
+#day3-3-1pic,
+#day3-3-2pic{
     display: none;
 }
 
