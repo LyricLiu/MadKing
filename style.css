@@ -611,6 +611,42 @@ h2{
     position: absolute;
 }
 
+#day5-1title{
+    height: 81px;
+    background: url(./img/day5-title.png);
+    position: absolute;
+    width: 203px;
+    top:60px;
+    right:80px;
+}
+
+#day5-1pic{
+    background: url(./img/day5-1.png);
+    width: 626px;
+    height: 524px;
+    bottom:0px;
+    left:10px;
+    position: absolute;
+}
+
+#day5-1pic1{
+    background: url(./img/day5-1-1.png);
+    width: 533px;
+    height: 454px;
+    bottom:20px;
+    left:35px;
+    position: absolute;
+}
+
+#day5-1pic2{
+    background: url(./img/day5-1-2.png);
+    width: 552px;
+    height: 597px;
+    bottom:0px;
+    left:50px;
+    position: absolute;
+}
+
 
 
 #day1-5-1b,
@@ -706,7 +742,12 @@ h2{
 #day4-3-2,
 #day4-3-3,
 #day4-3-4,
-#day4-3-5{
+#day4-3-5,
+#day5-1pic1,
+#day5-1pic2,
+#day5-1-2,
+#day5-1-3,
+#day5-1-4{
     display: none;
 }
 
