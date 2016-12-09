@@ -137,6 +137,13 @@ h2{
 	float: left;
 }
 
+.mid-module-0{
+    width:60px;
+    height:100%;
+    position: relative;
+    float: left;
+}
+
 .right-module{
 	width: calc(100% - 710px);
 	height:100%;
@@ -682,6 +689,81 @@ h2{
     width: 542px;
     height: 384px;
 }
+
+#re-text-big{
+    position:absolute;
+    left:340px;
+    top:0px;
+    font-size: 90px;
+    color: #e4945d;
+}
+
+
+#score-more{
+    background: url(./img/score-more.png);
+    top:100px;
+    left:20px;
+    position: relative;
+    width: 618px;
+    height: 107px;
+    margin-bottom: 30px;
+}
+
+#score-less{
+    background: url(./img/score-less.png);
+    top:100px;
+    left:20px;
+    position: relative;
+    width: 618px;
+    height: 107px;
+    margin-bottom: 30px;
+}
+
+#story-end-head{
+    background: url(./img/story-end-head.png);
+    top:60px;
+    left:80px;
+    position: absolute;
+    width: 297px;
+    height: 104px;
+}
+
+#end-love-pic{
+    background: url(./img/end-love-pic.png);
+    bottom:0;
+    left:40px;
+    position: absolute;
+    width: 635px;
+    height: 589px;
+}
+
+#end-nobreak-pic{
+    background: url(./img/end-nobreak-pic.png);
+    bottom:0;
+    right:20px;
+    position: absolute;
+    width: 323px;
+    height: 309px;
+}
+
+#end-break-pic{
+    background: url(./img/end-break-pic.png);
+    bottom:0;
+    right:0px;
+    position: absolute;
+    width: 364px;
+    height: 307px;
+}
+
+#end-nolove-pic{
+    background: url(./img/end-nolove-pic.png);
+    bottom:0;
+    left:40px;
+    position: absolute;
+    width: 514px;
+    height: 615px;
+}
+
 
 #day1-5-1b,
 #day1-5-1c,
