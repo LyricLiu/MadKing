@@ -665,6 +665,23 @@ h2{
     position: absolute;
 }
 
+#day6-1pic{
+    background: url(./img/day1-7pic.png);
+    bottom: 70px;
+    margin-left:40px;
+    position: absolute;
+    width: 542px;
+    height: 384px;
+}
+
+#day6-1pic0{
+    background: url(./img/day6-1.png);
+    bottom: 70px;
+    margin-left:40px;
+    position: absolute;
+    width: 542px;
+    height: 384px;
+}
 
 #day1-5-1b,
 #day1-5-1c,
@@ -769,7 +786,11 @@ h2{
 #day5-2-2,
 #day5-2-3,
 #day5-2-4,
-#day5-3{
+#day5-3,
+#day6-1pic0,
+#day6-1-2,
+#day5-2,
+#day6-1{
     display: none;
 }
 
