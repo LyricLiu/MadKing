@@ -604,10 +604,10 @@ h2{
 
 #day4-3pic{
     background: url(./img/day4-3.png);
-    width: 626px;
-    height: 524px;
+    width: 612px;
+    height: 572px;
     bottom:0px;
-    left:10px;
+    left:20px;
     position: absolute;
 }
 
@@ -702,7 +702,11 @@ h2{
 
 #day4-1,
 #day4-2,
-#day4-3{
+#day4-3,
+#day4-3-2,
+#day4-3-3,
+#day4-3-4,
+#day4-3-5{
     display: none;
 }
 
