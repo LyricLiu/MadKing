@@ -865,7 +865,7 @@ h2{
 #day5-1-3,
 #day5-1-4,
 #day5-1,
-#day5-2-2,
+#day5-2-1,
 #day5-2-3,
 #day5-2-4,
 #day5-3,
@@ -875,6 +875,14 @@ h2{
 #day6-1{
     display: none;
 }
+
+#endnobreak-love,
+#endbreak-love,
+#endbreak-nolove,
+#endnobreak-nolove{
+    display: none;
+}
+
 
 p:nth-child(1) {
     animation: fade-in 1s ease-in forwards;

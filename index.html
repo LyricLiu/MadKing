@@ -12,7 +12,7 @@
         <div id="relation">
             <h2 id="re-text">0</h2>
         </div>
-        <label class="hint-text">Here is your relationship with Hedda
+        <label id="hinttexte" class="hint-text">Here is your relationship with Hedda
             <br>Your decision might influence the value</label>
         <div id="score-pop">
             <h2 id="re-text-add">+10</h2><img src="./img/addScore.png"></div>
@@ -253,10 +253,6 @@
                     <br>
                     <br>
                     <a onclick="hide('day1-6-1');show('day1-7');show('day1-7-2');relationadd('5')">Walk her home</a>
-                    <br>
-                    <br>
-                    <br>
-                    <a onclick="hide('day1-6-1');show('day1-7');show('day1-7-3');relationsub('-10')">Say goodbye to her</a>
                 </div>
             </div>
         </div>
@@ -286,10 +282,6 @@
                     <br>
                     <br>
                     <a onclick="hide('day1-6-2');show('day1-7');show('day1-7-2');relationadd('5')">Walk her home</a>
-                    <br>
-                    <br>
-                    <br>
-                    <a onclick="hide('day1-6-2');show('day1-7');show('day1-7-2');relationsub('-10')">Say goodbye to her</a>
                 </div>
             </div>
         </div>
@@ -663,15 +655,15 @@
                     <div id="day4-1-1">
                         <p>You wake up. In the gray shadow of dawn you see several bubbles floating in the air not far away from you.</p>
                         <p>These bubbles drift up and down, under the dim lights from the sky reflecting a series of colorful images.</p></br>
-                        <a onclick="show('day4-2');hide('day4-1');setKnown()">You approach these bubbles silently.</a></br></br>
+                        <a onclick="show('day4-2');hide('day4-1')">You approach these bubbles silently.</a></br></br>
                         <a onclick="show('day4-1-2');hide('day4-1-1');relationsub('5')">You wake Hedda up</a></br></br>
-                        <a onclick="show('day4-3');hide('day4-1')">You go back to sleep</a>
+                        <a onclick="show('day5-1');hide('day4-1')">You go back to sleep</a>
                     </div>
                     <div id="day4-1-2">
                         <p>“Hedda, look there.” you point to the bubbles.</p>
                         <p>“Just ordinary bubbles.” Hedda squints and rubes her bleary eyes.</p></br>
-                        <a onclick="show('day4-3');hide('day4-1')">You yawn and go back to sleep.</a></br></br>
-                        <a onclick="show('day4-2');hide('day4-1');setKnown()">You approach these bubbles silently.</a>
+                        <a onclick="show('day5-1');hide('day4-1')">You yawn and go back to sleep.</a></br></br>
+                        <a onclick="show('day4-2');hide('day4-1')">You approach these bubbles silently.</a>
                     </div>
                 </div>
             </div>
@@ -705,7 +697,7 @@
                         <p>“Petra” you hear someone call you gently. </p>
                         <p>Hedda lays her slim hand on your back “What’s up, darling, you woke up so early.”</p>
                         <p>ou turn to her, look her in the eyes. So long.</p></br>
-                        <a onclick="hide('day4-3-1');show('day4-3-2');relationadd('10')">You tell the bubble scenes to Hedda</a></br></br>
+                        <a onclick="hide('day4-3-1');show('day4-3-2');relationadd('10');show('day5-2-1');hide('day5-2-2')">You tell the bubble scenes to Hedda</a></br></br>
                         <a onclick="hide('day4-3');show('day5-1')">You hide the bubble scenes from Hedda</a></br></br>
                         <a onclick="hide('day4-3-1');show('day4-3-3')">You remain silence.</a>
                     </div>
@@ -719,7 +711,7 @@
                     <div id="day4-3-3">
                         <p>Hedda stares at you. There is a gentleness in her eyes.</p>
                         <p>“Petra, if you don’t want me to know. I won’t ask anymore. But please remember, I will always on your side.” she says to you.</p></br>
-                        <a onclick="hide('day4-3-3');show('day4-3-2');relationadd('5')">You tell the bubble scenes to Hedda</a></br></br>
+                        <a onclick="hide('day4-3-3');show('day4-3-2');relationadd('5');show('day5-2-1');hide('day5-2-2')">You tell the bubble scenes to Hedda</a></br></br>
                         <a onclick="hide('day4-3');show('day5-1')">You hug Hedda for a while, then head for the castle</a>
                     </div>
                     <div id="day4-3-4">
