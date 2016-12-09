@@ -123,7 +123,7 @@ h2{
 }
 
 .left-module{
-	width:650px;
+    width: calc(100% - 760px);
 	height:100%;
 	position: relative;
 	float: left;
@@ -145,7 +145,7 @@ h2{
 }
 
 .right-module{
-	width: calc(100% - 710px);
+    width:700px;
 	height:100%;
 	position: relative;
 	overflow: hidden;
