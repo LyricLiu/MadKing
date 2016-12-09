@@ -790,7 +790,7 @@
                         <p>Although there is a huge and elegant dinner table set with dozens of delicious dishes for you to pick from, you have no appetite at all.</p>
                         <p>Eat half, a servant carries a pot of wine to you.</p>
                         <p>“It’s a reward for you,” the King said “for you bring my princess back. Let’s drink.”</p></br>
-                        <a onclick="hide('day5-2-1');show('day5-3')">You hesitate.</a></br></br>
+                        <a onclick="hide('day5-2-1');show('day5-2-4')">You hesitate.</a></br></br>
                         <a onclick="hide('day5-2-1');show('day5-2-3')">You drink the wine</a>
                     </div>
                     <div id="day5-2-2">
@@ -804,11 +804,37 @@
                         <p>You have a sip of the wine and put the pot down. </p>
                         <p>Sharp pain lance through your stomach and colorful spots flashes in front of your eyes. Your whole body has been beaten and every movement causes some muscle or bone to ache.</p>
                         <p>You hear Hedda crying, “Petra, Petra… Dad, what you have done to him… Petra, please please wake up.”</p></br>
-                        <a onclick="hide('day5-2');show('day5-end')">You die.</a>
+                        <a onclick="hide('day5-2');end()">You die.</a>
+                    </div>
+                    <div id="day5-2-4">
+                        <p>You hesitate for a while, if the King wants to kill you, a pot of poisoned wine would be the best choice.</p>
+                        <p>“What? You want to defy me?” fires of fury and hatred are smoldering in the King’s small narrowed eyes as he speaks, “Bernard, kill him!”</p>
+                        <p>Some soldiers with sharp weapons surround you.</p>
+                        <p>You grab a fork and whisper a spell towards it.</p></br>
+                        <a onclick="hide('day5-2');show('day5-3')">You want to get a sword.</a></br></br>
+                        <a onclick="hide('day5-2');show('day5-3')">You want to get a shield.</a>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="day5-3" class="pages">
+            <div class="left-module">
+                <div id="day5-3pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day5-1title"></div>
+                <div class="day-text">
+                    <p>The next moment, you find what in your hand is a whip.</p>
+                    <p>“Oh my goodness. Look at what I get. My damn magic.” you shout. But suddenly you realized how good a whip is.</p>
+                    <p>You gather all your strength to wave the whip towards the King’s sceptre. </p>
+                    <p>You hear a loud crash and you feel a sword penetrate through your chest.</p>
+                    <p>“Petra—“</p></br>
+                    <a onclick="hide('day5-3');endBreak()">The King’s magic is broken. You die.</a>
+                </div>
+            </div>
+        </div>
+
         
 
 

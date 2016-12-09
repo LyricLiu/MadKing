@@ -656,6 +656,14 @@ h2{
     position: absolute;
 }
 
+#day5-3pic{
+    background: url(./img/day5-3.png);
+    width: 661px;
+    height: 537px;
+    bottom:10px;
+    left:-10px;
+    position: absolute;
+}
 
 
 #day1-5-1b,
@@ -759,7 +767,9 @@ h2{
 #day5-1-4,
 #day5-1,
 #day5-2-2,
-#day5-2-3{
+#day5-2-3,
+#day5-2-4,
+#day5-3{
     display: none;
 }
 
