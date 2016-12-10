@@ -56,13 +56,13 @@ function end() {
     var love = document.getElementById('day6-1');
     var nolove = document.getElementById('endnobreak-nolove');
     var value = document.getElementById('re-text');
-    var finalvalue = document.getElementById('re-text-big');
+    var finalvalue = document.getElementById('nobreak-nolove-text');
     var relation = parseInt(value.innerHTML);
+    finalvalue.innerHTML = relation.toString();
     if (relation >= 60) {
         love.style.display = "block";
     } else {
         nolove.style.display = "block";
-        finalvalue.innerHTML = value.innerHTML;
     }
 }
 
@@ -72,14 +72,14 @@ function endBreak() {
     var love = document.getElementById('day6-1');
     var nolove = document.getElementById('endbreak-nolove');
     var value = document.getElementById('re-text');
-    var finalvalue = document.getElementById('re-text-big');
+    var finalvalue = document.getElementById('break-nolove-text');
     var relation = parseInt(value.innerHTML);
     if (relation >= 60) {
         love.style.display = "block";
         stoneBreak = true;
     } else {
         nolove.style.display = "block";
-        finalvalue.innerHTML = value.innerHTML;
+        finalvalue.innerHTML = relation.toString();
     }
 }
 
@@ -89,14 +89,15 @@ function final() {
     var endbreak = document.getElementById('endbreak-love');
     var nobreak = document.getElementById('endnobreak-love');
     var value = document.getElementById('re-text');
-    var finalvalue = document.getElementById('re-text-big');
+    var finalvalue = document.getElementById('nobreak-love-text');
+    var finalvalue1 = document.getElementById('break-love-text');
     var relation = parseInt(value.innerHTML);
     if (stoneBreak == true) {
         endbreak.style.display = "block";
-        finalvalue.innerHTML = value.innerHTML;
+        finalvalue1.innerHTML = relation.toString();
     } else {
         nobreak.style.display = "block";
-        finalvalue.innerHTML = value.innerHTML;
+        finalvalue.innerHTML = relation.toString();
     }
 }
 

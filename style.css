@@ -690,7 +690,7 @@ h2{
     height: 384px;
 }
 
-#re-text-big{
+.re-text-big{
     position:absolute;
     left:340px;
     top:0px;
