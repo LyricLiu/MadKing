@@ -1,7 +1,7 @@
 *{
 	margin:0;
 	border: 0;
-	font-family: faricy-new-web, sans-serif;
+	font-family: europa, sans-serif;
 	font-style: normal;
 	font-weight: 300;
 }
@@ -19,18 +19,77 @@ html, body{
     height: 100%;
     max-height: 100%;
 
-    background-color: #373549;
+    background-color: #16242e;
+
+}
+
+#main{
+    width:100%;
+    height:100%;
+    background: #373549 url(./img/brick.png) no-repeat left center;
 }
 
 p{
-	font-size: 20px;
-	margin-bottom: 20px;
+	font-size: 22px;
+	margin-bottom: 30px;
 	color: #b7b9a7;
+	line-height: 32px;
+	font-weight: lighter;
+}
+
+a{
+    font-size: 20px;
+    background-color: #404057;
+    padding:5px 10px;
+    margin:10px 0;
+    color: #eec179;
+    cursor: pointer;
+    animation: come-in 1s ease-in forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+}
+
+#score-pop{
+    animation: fade-in 0.5s ease-in forwards;
+    transform: translateY(1em);
+    opacity: 0;
+    position: absolute;
+    top:80px;
+    left:93px;
+    display: none;
+}
+
+#score-pop h2{
+    padding-top:23px;
+    padding-left:27px;
+    position: absolute;
+    z-index: 9999;
+    font-size: 30px;
+    letter-spacing:5px
+}
+
+#score-pop img{
+    position: absolute;
 }
 
 
+a:hover{
+    color: #e49443;
+}
+
+span{
+	color: #eec179;
+	text-decoration: underline;
+	cursor: pointer;
+	z-index: 6666;
+}
+
+span:hover{
+	color: #e49443;
+}
+
 #relation{
-	position: fixed;
+	position: absolute;
 	left:55px;
 	top:40px;
 	background: url(./img/love-tag.png);
@@ -40,17 +99,31 @@ p{
 	z-index: 6666;
 }
 
-#relation span{
+h2{
+    font-size: 40px;
+    color:#eec179;
+}
+
+#re-text{
 	position: absolute;
 	font:Futura Medium;
-	font-size: 40px;
-	color:#eec179;
 	margin-left:90px;
-	padding-top: 10px;
+	padding-top: 8px;
+}
+
+.hint-text{
+	text-decoration: none;
+	font-size: 16px;
+	position: absolute;
+	font-weight: light;
+	top:45px;
+	left:250px;
+	line-height: 25px;
+	color: #eec179;
 }
 
 .left-module{
-	width:650px;
+    width: calc(100% - 760px);
 	height:100%;
 	position: relative;
 	float: left;
@@ -64,14 +137,21 @@ p{
 	float: left;
 }
 
+.mid-module-0{
+    width:60px;
+    height:100%;
+    position: relative;
+    float: left;
+}
+
 .right-module{
-	width: calc(100% - 710px);
+    width:700px;
 	height:100%;
 	position: relative;
 	overflow: hidden;
 }
 
-#day1-1{
+.pages{
 	height:100%;
 	width: 100%;
 }
@@ -87,7 +167,6 @@ p{
 
 #day1-mom{
 	position: absolute;
-	background: url(./img/day1-mom.png);
 	width:218px;
 	height:136px;
 	bottom: 380px;
@@ -99,6 +178,8 @@ p{
 	position: absolute;
 	bottom: 0px;
 	left:310px;
+	z-index: 666;
+    animation: flash-in 1s infinite ease-in-out alternate;
 }
 
 #day1-button :hover{
@@ -107,11 +188,1194 @@ p{
 }
 
 #day1-1text{
-	height: 500px;
+	height: 450px;
 	position: absolute;
 	bottom: 20px;
-	width: calc(100% - 70px);
+	width: calc(100% - 80px);
 	margin-left: 20px;
+	display: none;
+}
+
+#day1-1title{
+	height: 81px;
+	background: url(./img/day1-title.png);
+	position: absolute;
+	width: 193px;
+	top:60px;
+	right:80px;
+}
+
+#day1-2pic{
+	background: url(./img/day1-witch.png);
+	width: 559px;
+	height: 348px;
+	position: absolute;
+	bottom: 100px;
+	margin-left:30px;
+}
+
+.day-text{
+	height: 520px;
+	position: absolute;
+	bottom: 20px;
+	width: calc(100% - 80px);
+	margin-left: 20px;
+}
+
+.day-text-left{
+    height: 520px;
+    position: absolute;
+    top: 200px;
+    width: 550px;
+    margin-left: 40px;
+}
+
+#day1-2{
+	display: none;
+}
+
+#workshop{
+	display: none;
+}
+
+
+#day1-4-1{
+	display: block;
+}
+
+#day1-4pic{
+	position: absolute;
+	top: 150px;
+	margin-left:300px;
+	display: none;
+	animation: fade-in 0.5s ease-in forwards;
+}
+
+#day1-4pic2{
+	background: url(./img/day1-3pic2.png);
+	bottom: 50px;
+	margin-left:0;
+	position: absolute;
+	width: 628px;
+	height: 339px;
+}
+
+#day1-4pic2a{
+    background: url(./img/day1-3pic2b.png);
+    bottom: 60px;
+    margin-left:0;
+    position: absolute;
+    width: 628px;
+    height: 295px;
+}
+
+#day1-5-1{
+	display: none;
+}
+
+#day1-5pic{
+	background: url(./img/day1-5pic.png);
+	bottom: 0px;
+	margin-left:50px;
+	position: absolute;
+	width: 422px;
+	height: 607px;
+}
+
+#day1-5pic2{
+	top: 200px;
+	margin-left:380px;
+	position: absolute;
+	animation: fade-in 0.5s ease-in forwards;
+}
+
+#day1-6pic1{
+    background: url(./img/day1-6pic1.png);
+    bottom: 100px;
+    margin-left:0px;
+    position: absolute;
+    width: 660px;
+    height: 358px;
+}
+
+#day1-6pic2{
+    background: url(./img/day1-6pic2.png);
+    bottom: 70px;
+    margin-left:10px;
+    position: absolute;
+    width: 636px;
+    height: 447px;
+}
+
+#day1-7pic{
+    background: url(./img/day1-7pic.png);
+    bottom: 70px;
+    margin-left:40px;
+    position: absolute;
+    width: 542px;
+    height: 384px;
+}
+
+#day2-1title{
+    height: 81px;
+    background: url(./img/day2-title.png);
+    position: absolute;
+    width: 202px;
+    top:60px;
+    right:80px;
+}
+
+#day2-1pic{
+    background: url(./img/day2-1.png);
+    bottom: 50px;
+    margin-left:50px;
+    position: absolute;
+    width: 518px;
+    height: 455px;
+}
+
+#day2-2-1pic{
+    background: url(./img/day2-2.png);
+    bottom: 50px;
+    margin-left:0px;
+    position: absolute;
+    width: 684px;
+    height: 430px;
+}
+
+#day2-2-2pic{
+    background: url(./img/day2-3-1.png);
+    bottom: 0px;
+    margin-left:40px;
+    position: absolute;
+    width: 640px;
+    height: 582px;
+}
+
+#day2-2-3pic{
+    background: url(./img/day2-3-2.png);
+    bottom: 0px;
+    margin-left:40px;
+    position: absolute;
+    width: 640px;
+    height: 582px;
+}
+
+#day2-2-4pic{
+    background: url(./img/day2-3-3.png);
+    bottom: 0px;
+    margin-left:40px;
+    position: absolute;
+    width: 640px;
+    height: 582px;
+}
+
+#day2-2-5pic{
+    background: url(./img/day2-4.png);
+    bottom: 50px;
+    margin-left:30px;
+    position: absolute;
+    width: 556px;
+    height: 457px;
+}
+
+#day2-3pic{
+    background: url(./img/day2-5.png);
+    bottom: 40px;
+    margin-left:10px;
+    position: absolute;
+    width: 624px;
+    height: 469px;
+}
+
+#day2-4pic{
+    background: url(./img/day2-6.png);
+    bottom: 0px;
+    margin-left:10px;
+    position: absolute;
+    width: 483px;
+    height: 558px;
+}
+
+#day2-4pic2{
+    background: url(./img/day2-7.png);
+    bottom: 50px;
+    margin-left:0px;
+    position: absolute;
+    width: 664px;
+    height: 470px;
+}
+
+#day2-5pic{
+    background: url(./img/day2-7-0.png);
+    bottom: 50px;
+    margin-left:30px;
+    position: absolute;
+    width: 561px;
+    height: 445px;
+}
+
+#day2-6pic{
+    background: url(./img/day2-8.png);
+    bottom: 50px;
+    margin-left:20px;
+    position: absolute;
+    width: 610px;
+    height: 470px;
+}
+
+#day3-2{
+    background: url(./img/secret-bg.png);
+    bottom:0;
+    left:-20px;
+    position: absolute;
+    width: 1440px;
+    height: 808px;
+}
+
+#secret-box{
+    background: url(./img/secret-box.png);
+    bottom:127px;
+    left:340px;
+    position: absolute;
+    width: 163px;
+    height: 117px;
+    cursor:pointer;
+}
+
+#secret-letter{
+    background: url(./img/secret-letter.png);
+    bottom:453px;
+    left:640px;
+    position: absolute;
+    width: 64px;
+    height: 35px;
+    cursor:pointer;
+}
+
+#secret-pillow{
+    background: url(./img/bg-pillow.png);
+    bottom:205px;
+    left:1088px;
+    position: absolute;
+    width: 148px;
+    height: 137px;
+    cursor:pointer;
+}
+
+#day3-2-1{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(55, 53, 73, 0.8);
+}
+
+#secret-pop{
+    background: url(./img/secret-pop.png);
+    width:1112px;
+    height:600px;
+    position: absolute;
+    left:calc(50% - 556px);
+    bottom:50px;
+}
+
+#secret-magic{
+    background: url(./img/secret-magic.png);
+    bottom:100px;
+    left:30px;
+    position: absolute;
+    width: 326px;
+    height: 349px;
+}
+
+#secret-read{
+    background: url(./img/secret-read.png);
+    bottom:100px;
+    left:30px;
+    position: absolute;
+    width: 309px;
+    height: 333px;
+}
+
+#secret-voodoo{
+    background: url(./img/secret-voodoo.png);
+    bottom:100px;
+    left:30px;
+    position: absolute;
+    width: 288px;
+    height: 334px;
+}
+
+#voodoo-text{
+    background: url(./img/secret-text1.png);
+    top:50px;
+    left:0px;
+    position: relative;
+    width: 228px;
+    height: 113px;
+    margin-bottom: 40px;
+}
+
+.secret-text{
+    left:410px;
+    top:150px;
+    width:690px;
+    position: relative;
+}
+
+#day3-1title{
+    height: 81px;
+    background: url(./img/day3-title.png);
+    position: absolute;
+    width:236px;
+    top:60px;
+    right:80px;
+}
+
+#end-title{
+    background: url(./img/story-end.png);
+    width: 232px;
+    height: 81px;
+    margin-top: 20px;
+}
+
+#end1{
+    margin:40px;
+    margin-top:100px;
+}
+
+#day3-3-2pic{
+    background: url(./img/day3-1-0.png);
+    width: 563px;
+    height: 562px;
+    bottom:20px;
+    left:5px;
+    position: absolute;
+}
+
+#day3-3-1pic{
+    background: url(./img/day3-1.png);
+    width: 335px;
+    height: 237px;
+    bottom:160px;
+    left:100px;
+    position: absolute;
+}
+
+#day3-4pic{
+    background: url(./img/day3-2.png);
+    width: 605px;
+    height: 428px;
+    bottom:50px;
+    left:30px;
+    position: absolute;
+}
+
+#day3-4pic2{
+    background: url(./img/day3-5.png);
+    width: 605px;
+    height: 428px;
+    bottom:50px;
+    left:30px;
+    position: absolute;
+}
+
+#day4-1title{
+    height: 81px;
+    background: url(./img/day4-title.png);
+    position: absolute;
+    width:215px;
+    top:60px;
+    right:80px;
+}
+
+#day4-1pic{
+    background: url(./img/day4-1.png);
+    width: 605px;
+    height: 428px;
+    bottom:50px;
+    left:30px;
+    position: absolute;
+}
+
+#day4-2pic{
+    background: url(./img/day4-2.png);
+    width: 526px;
+    height: 463px;
+    bottom:30px;
+    left:60px;
+    position: absolute;
+}
+
+#day4-3pic{
+    background: url(./img/day4-3.png);
+    width: 612px;
+    height: 572px;
+    bottom:0px;
+    left:20px;
+    position: absolute;
+}
+
+#day5-1title{
+    height: 81px;
+    background: url(./img/day5-title.png);
+    position: absolute;
+    width: 203px;
+    top:60px;
+    right:80px;
+}
+
+#day5-1pic{
+    background: url(./img/day5-1.png);
+    width: 626px;
+    height: 524px;
+    bottom:0px;
+    left:10px;
+    position: absolute;
+}
+
+#day5-1pic1{
+    background: url(./img/day5-1-1.png);
+    width: 533px;
+    height: 454px;
+    bottom:20px;
+    left:35px;
+    position: absolute;
+}
+
+#day5-1pic2{
+    background: url(./img/day5-1-2.png);
+    width: 552px;
+    height: 597px;
+    bottom:0px;
+    left:50px;
+    position: absolute;
+}
+
+#day5-2pic{
+    background: url(./img/day5-2.png);
+    width: 499px;
+    height: 522px;
+    bottom:0px;
+    left:70px;
+    position: absolute;
+}
+
+#day5-3pic{
+    background: url(./img/day5-3.png);
+    width: 661px;
+    height: 537px;
+    bottom:10px;
+    left:-10px;
+    position: absolute;
+}
+
+#day6-1pic{
+    background: url(./img/day1-7pic.png);
+    bottom: 70px;
+    margin-left:40px;
+    position: absolute;
+    width: 542px;
+    height: 384px;
+}
+
+#day6-1pic0{
+    background: url(./img/day6-1.png);
+    bottom: 70px;
+    margin-left:40px;
+    position: absolute;
+    width: 542px;
+    height: 384px;
+}
+
+.re-text-big{
+    position:absolute;
+    left:340px;
+    top:0px;
+    font-size: 90px;
+    color: #e4945d;
+}
+
+
+#score-more{
+    background: url(./img/score-more.png);
+    top:100px;
+    left:20px;
+    position: relative;
+    width: 618px;
+    height: 107px;
+    margin-bottom: 30px;
+}
+
+#score-less{
+    background: url(./img/score-less.png);
+    top:100px;
+    left:20px;
+    position: relative;
+    width: 618px;
+    height: 107px;
+    margin-bottom: 30px;
+}
+
+#story-end-head{
+    background: url(./img/story-end-head.png);
+    top:60px;
+    left:80px;
+    position: absolute;
+    width: 297px;
+    height: 104px;
+}
+
+#end-love-pic{
+    background: url(./img/end-love-pic.png);
+    bottom:0;
+    left:40px;
+    position: absolute;
+    width: 635px;
+    height: 589px;
+}
+
+#end-nobreak-pic{
+    background: url(./img/end-nobreak-pic.png);
+    bottom:0;
+    right:20px;
+    position: absolute;
+    width: 323px;
+    height: 309px;
+}
+
+#end-break-pic{
+    background: url(./img/end-break-pic.png);
+    bottom:0;
+    right:0px;
+    position: absolute;
+    width: 364px;
+    height: 307px;
+}
+
+#end-nolove-pic{
+    background: url(./img/end-nolove-pic.png);
+    bottom:0;
+    left:40px;
+    position: absolute;
+    width: 514px;
+    height: 615px;
+}
+
+
+#day1-5-1b,
+#day1-5-1c,
+#day1-5-1d,
+#day1-5-1d1,
+#day1-5-1e,
+#day1-5-1ep,
+#day1-5-1epp,
+#day1-5-1d1p,
+#day1-5-2d,
+#day1-5-2da,
+#day1-5-2db,
+#day1-5-2c,
+#day1-5-2a,
+#day1-5-2b,
+#day1-5-1a,
+#day1-5-1b,
+#day-elixir,
+#day-puff,
+#day1-4-1,
+#day-elixir1,
+#day-puff1,
+#day1-4pic2,
+#day1-4pic2a,
+#day1-6-1b{
+    display: none;
+}
+
+#day1-6-2b,
+#day1-7pic,
+#day1-7-1,
+#day1-7-2,
+#day1-7-3,
+#day1-7,
+#day1-6-2,
+#day1-6-1,
+#day2-1,
+#day2-2,
+#day2-1-1,
+#day2-1-2,
+#day2-1-3,
+#day2-1-4,
+#day2-1pic,
+#day2-2-2pic,
+#day2-2-3pic,
+#day2-2-4pic,
+#day2-2-5pic,
+#day2-2-2,
+#day2-2-3,
+#day2-2-4,
+#day2-2-5,
+#day2-4pic2,
+#day2-4-2,
+#day2-4-3,
+#day2-4,
+#day2-6-1,
+#day2-6-2,
+#day2-5,
+#day2-6,
+#day2-3{
+    display: none;
+}
+
+#day3-2-1-1,
+#day3-2-1-3,
+#day3-2-1-2,
+#day3-2-1,
+#day3-2,
+#day3-1,
+#day3-3,
+#day3-3-2,
+#day3-3-1,
+#day3-end,
+#day3-3-1pic,
+#day3-3-2pic,
+#day3-3-3,
+#day3-4-2,
+#day3-4-3,
+#day3-4-4,
+#day3-4-5,
+#day3-4-6,
+#day3-4pic2,
+#day4-1-2,
+#day3-4-4-1,
+#day3-4{
+    display: none;
+}
+
+#day4-1,
+#day4-2,
+#day4-3,
+#day4-3-2,
+#day4-3-3,
+#day4-3-4,
+#day4-3-5,
+#day5-1pic1,
+#day5-1pic2,
+#day5-1-2,
+#day5-1-3,
+#day5-1-4,
+#day5-1,
+#day5-2-1,
+#day5-2-3,
+#day5-2-4,
+#day5-3,
+#day6-1pic0,
+#day6-1-2,
+#day5-2,
+#day6-1{
+    display: none;
+}
+
+#endnobreak-love,
+#endbreak-love,
+#endbreak-nolove,
+#endnobreak-nolove{
+    display: none;
+}
+
+
+p:nth-child(1) {
+    animation: fade-in 1s ease-in forwards;
+    transform: translateY(1em);
+    opacity: 0;
+}
+
+p:nth-child(2) {
+    animation: fade-in 1s ease-in forwards;
+    transform: translateY(1em);
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+p:nth-child(3) {
+    animation: fade-in 1s ease-in forwards;
+    transform: translateY(1em);
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+p:nth-child(4) {
+    animation: fade-in 1s ease-in forwards;
+    transform: translateY(1em);
+    animation-delay: 0.9s;
+    opacity: 0;
+}
+
+p:nth-child(5) {
+    animation: fade-in 1s ease-in forwards;
+    transform: translateY(1em);
+    animation-delay: 1.2s;
+    opacity: 0;
+}
+
+p:nth-child(6) {
+    animation: fade-in 1s ease-in forwards;
+    transform: translateY(1em);
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+p:nth-child(7) {
+    animation: fade-in 1s ease-in forwards;
+    transform: translateY(1em);
+    animation-delay: 1.7s;
+    opacity: 0;
+}
+
+
+
+@keyframes come-in{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+ }
+
+@keyframes fade-in{
+  from {
+    padding-top: 20px;
+    opacity: 0;
+  }
+
+  to {
+    padding-top: 0;
+    opacity: 1;
+  }
+ }
+
+ .ui-draggable-handle {
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+@keyframes flash-in{
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+ }
+
+
+#workshop {
+    position: relative;
+    width: 1356px;
+    height: 755px;
+    margin: 0 auto;
+    background: url(./image/workshopbg.png);
+    top:-5px;
+}
+
+#instruction {
+    position: absolute;
+    top: 8px;
+    left: 746px;
+    color: #c09034;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#things-used-to-brew {
+    position: absolute;
+    top: 287px;
+    left: 195px;
+    width: 379px;
+    height: 411px;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+#things-used-to-brew.over {
+    transform: scale(1.05, 1.05) translateY(-2.5%);
+    opacity: 0.8;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+#cauldron {
+    width: 379px;
+    height: 378px;
+    background: url(./image/cauldron.png);
+}
+
+#fire {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 357px;
+    height: 124px;
+    background: url(./image/fire.png);
+}
+
+#brew-font {
+    position: absolute;
+    top: 95px;
+    left: 119px;
+    width: 140px;
+    height: 96px;
+    background: url(./image/brew-font.png);
+    cursor: pointer;
+    display: none;
+}
+
+#brew-font:hover{
+    position: absolute;
+    top: 95px;
+    left: 119px;
+    width: 140px;
+    height: 96px;
+    background: url(./image/brew-font1.png);
+    cursor: pointer;
+    display: none;
+}
+
+#witcherybook {
+    position: absolute;
+    top: 482px;
+    left: 1181px;
+    width: 147px;
+    height: 180px;
+    background: url(./image/witcherybook.png);
+    cursor: pointer;
+    animation: flash-in 1s infinite ease-in-out alternate;
+}
+
+.items,
+.items-tag {
+    position: absolute;
+}
+
+.items {
+    cursor: move;
+}
+
+#rabbiteye {
+    width: 59px;
+    height: 59px;
+    top: 114px;
+    left: 804px;
+    background: url(./image/rabbiteye.png);
+}
+
+#snaketongue {
+    width: 130px;
+    height: 122px;
+    top: 96px;
+    left: 948px;
+    background: url(./image/snaketongue.png);
+}
+
+#batwing {
+    width: 81px;
+    height: 107px;
+    top: 116px;
+    left: 1176px;
+    background: url(./image/batwing.png);
+}
+
+#coral {
+    width: 147px;
+    height: 98px;
+    top: 278px;
+    left: 793px;
+    background: url(./image/coral.png);
+}
+
+#octopusleg {
+    width: 106px;
+    height: 106px;
+    top: 404px;
+    left: 1058px;
+    background: url(./image/octopusleg.png);
+    z-index:66;
+}
+
+#lava {
+    width: 96px;
+    height: 132px;
+    top: 489px;
+    left: 868px;
+    background: url(./image/lava.png);
+}
+
+#rabbiteye-tag {
+    width: 128px;
+    height: 55px;
+    top: 172px;
+    left: 770px;
+    background: url(./image/rabbiteye-tag.png);
+}
+
+#snaketongue-tag {
+    width: 143px;
+    height: 55px;
+    top: 174px;
+    left: 950px;
+    background: url(./image/snaketongue-tag.png);
+}
+
+#batwing-tag {
+    width: 112px;
+    height: 55px;
+    top: 174px;
+    left: 1161px;
+    background: url(./image/batwing-tag.png);
+}
+
+#coral-tag {
+    width: 116px;
+    height: 53px;
+    top: 332px;
+    left: 832px;
+    background: url(./image/coral-tag.png);
+}
+
+#octopusleg-tag {
+    width: 143px;
+    height: 163px;
+    top: 321px;
+    left: 1037px;
+    background: url(./image/octopusleg-tag.png);
+}
+
+#lava-tag {
+    width: 102px;
+    height: 52px;
+    top: 575px;
+    left: 907px;
+    background: url(./image/lava-tag.png);
+}
+
+.mask {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(55, 53, 73, 0.8);
+    display: none;
+}
+
+#bookbg {
+    position: absolute;
+    top: 30px;
+    left: 170px;
+    margin: 0 auto;
+    width: 991px;
+    height: 646px;
+    background: url(./image/book/bookbg.png);
+}
+
+#cancel-icon-01 {
+    position: absolute;
+    top: 29px;
+    right: 91px;
+    width: 74px;
+    height: 74px;
+    background: url(./image/book/cancel-icon-01.png);
+    cursor: pointer;
+}
+
+.page {
+    position: absolute;
+    top: 89px;
+    width: 100%;
+    height: calc(100% - 89px);
+}
+
+.book-title {
+    position: relative;
+    left: 170px;
+}
+
+#howtomake-title {
+    width: 607px;
+    height: 73px;
+    background: url(./image/book/howtomake-title.png);
+}
+
+#howtomake-content {
+    position: relative;
+    top: 19px;
+    left: 170px;
+    color: #c09034;
+    font-size: 22px;
+    line-height: 45px;
+    list-style: square;
+}
+
+.book-link {
+    position: absolute;
+    bottom: 72px;
+    right: 100px;
+    color: #c09034;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.book-link:hover {
+    color: #e49443;
+}
+
+#whatcanmake-title {
+    width: 554px;
+    height: 72px;
+    background: url(./image/book/whatcanmake-title.png);
+}
+
+#things-to-make>li {
+    position: absolute;
+    color: #538d6d;
+    list-style: square;
+    font-size: 18px;
+}
+
+#book-elixir-text {
+    top: 417px;
+    left: 148px;
+    width:280px;
+}
+
+#book-puffskein-text {
+    top: 320px;
+    left: 600px;
+    width:280px;
+}
+
+#book-elixir {
+    position: absolute;
+    top: 95px;
+    left: 145px;
+    width: 248px;
+    height: 298px;
+    background: url(./image/book/book-elixir.png);
+}
+
+#book-puffskein {
+    position: absolute;
+    top: 100px;
+    left: 616px;
+    width: 231px;
+    height: 204px;
+    background: url(./image/book/book-puffskein.png);
+}
+
+#outcone-bg {
+    position: absolute;
+    top: 66px;
+    left: 159px;
+    width: 1037px;
+    height: 600px;
+    background: url(./image/outcome/outcome-bg.png);
+}
+
+#thing-won {
+    display: block;
+    position: absolute;
+    top: 124px;
+    left: 70px;
+}
+
+#outcome-container{
+    z-index: 666;
+}
+
+#book-container{
+    z-index:666;
+}
+
+#outcome-success-title {
+    position: absolute;
+    top: 159px;
+    left: 424px;
+    color: #c09034;
+    font-size: 36px;
+    letter-spacing: 0.8px;
+}
+
+#thing-won-text {
+    display: block;
+    position: absolute;
+    top: 244px;
+    left: 422px;
+}
+
+#outcome-success-text {
+    position: absolute;
+    top: 365px;
+    left: 422px;
+    width: 580px;
+    color: #c09034;
+    font-size: 22px;
+    line-height: 38px;
+}
+
+#full-name{
+    font-weight: lighter;
+    text-decoration: none;
+    color: #c09034;
+    cursor: none;
+}
+
+#sell-action {
+    cursor: pointer;
+}
+
+
+#success, #empty {
+    display: none;
+}
+
+#outcome-empty {
+    position: absolute;
+    top: 179px;
+    left: 112px;
+    width: 218px;
+    height: 301px;
+    background: url(./image/outcome/outcome-empty.png);
+}
+
+#outcome-empty-title {
+    position: absolute;
+    top: 174px;
+    left: 423px;
+    color: #2d9883;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+#outcome-empty-text {
+    position: absolute;
+    top: 270px;
+    left: 429px;
+    width: 490px;
+    color: #c09034;
+    font-size: 22px;
+    line-height: 38px;
+}
+
+#retry-button{
+    position: absolute;
+    top: 426px;
+    left: 424px;
+    width: 194px;
+    height: 57px;
+    background: url(./image/outcome/retry-button.png);
+    cursor: pointer;
 }
 
 

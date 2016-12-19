@@ -1,33 +1,1071 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Mad King - Flawed Magic</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>Mad King - Flawed Magic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-	<div id="relation">
-		<span>0</span>
-	</div>
-	<div id="day1-1">
-		<div class="left-module">
-			<div id="day1-1pic">
-				<div id="day1-mom">
-				</div>
-				<div id="day1-button">
-					<img src="./img/day1-button.png" onclick="show('day1-mom');show('day1-1text')">
-				</div>
-			</div>
-		</div>
-		<div class="mid-module"></div>
-		<div class="right-module">
-			<div id="day1-1text">
-				<p>You push the door gingerly and it swings open with ease, a blast of repulsive aroma streams past you and some green haze drifted from the room out of sight. “Mom” you whisper.</p>
-				<p>There is no answer there.</p>
-				<p>You sneak into that craft room and close the door fluently. You have repeated these actions hundreds of times whenever your Witch mom is not at home. </p>
-			</div>
-		</div>
-	</div>
-	 <script type="text/javascript" src="./main.js"></script>
+    <div id="main">
+        <div id="relation">
+            <h2 id="re-text">0</h2>
+        </div>
+        <label id="hinttexte" class="hint-text">Here is your relationship with Hedda
+            <br>Your decision might influence the value</label>
+        <div id="score-pop">
+            <h2 id="re-text-add">+10</h2><img src="./img/addScore.png"></div>
+        <div id="day1-1" class="pages">
+            <div class="left-module">
+                <div id="day1-1pic">
+                    <div id="day1-mom">
+                        <img src="./img/day1-mom.png">
+                    </div>
+                    <div id="day1-button">
+                        <img src="./img/day1-button.png" onclick="show('day1-mom');show('day1-1text');hide('day1-button')">
+                    </div>
+                </div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div id="day1-1text">
+                    <p>You push the door gingerly and it swings open with ease, a blast of repulsive aroma streams past you and some green haze drifts from the room out of sight. “Mom” you whisper.</p>
+                    <p>There is no answer there.</p>
+                    <p>You <a onclick="hide('day1-1');show('day1-2')">sneak into the workshop</a> and close the door quickly. You have repeated these actions hundreds of times whenever your Witch mom is not at home. </p>
+                </div>
+            </div>
+        </div>
+        <div id="day1-2" class="pages">
+            <div class="left-module">
+                <div id="day1-2pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div class="day-text">
+                    <p>Shelves everywhere are crammed with glass jars of weird ingredients; a black pointed hat rests on a shabby broomstick; several cauldrons are still bubbling and steaming with self-stirring spoons. </p>
+                    <p>You don’t know why she constantly bans you from learning witchcraft. Witchcraft is so compelling, you cannot prevent yourself from exploring into this magical world. And your belief never changes, you are destined to become a famous wizard.</p>
+                    <p>You find out a worn witchery book, read it, then turn to a brewing cauldron.</p>
+                    <p>You are going to <a onclick="hide('day1-2');hide('main');show('workshop')">make something magic</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div id="day1-4-1" class="pages">
+            <div class="left-module">
+                <div id="day1-4pic">
+                    <img src="./img/day1-3pic.png">
+                </div>
+                <div id="day1-4pic2"></div>
+                <div id="day1-4pic2a"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div class="day-text">
+                    <p id="day-elixir">Nearly all of your One-day Elixirs are sold out. </p>
+                    <p id="day-puff">You spend half a day there with nothing sold out. </p>
+                    <p>“Shush —“, you hear her whisper in a soft and anxious voice. You discover a girl hiding behind you.</p>
+                    <p>Pretending nothing happened, you face back to the street.</p>
+                    <p>Several <span onclick="show('day1-4pic')">soldiers</span> with polished weapons pass you by.</p>
+                    <p id="day-elixir1">You turn to the girl, <a onclick="hide('day1-4-1');show('day1-5-1');show('day1-5-1a')">"Soldiers are gone."</a></p>
+                    <p id="day-puff1">You turn to the girl, <a onclick="hide('day1-4-1');show('day1-5-1');show('day1-5-2a')">"Soldiers are gone."</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="day1-5-1" class="pages">
+            <div class="left-module">
+                <div id="day1-5pic">
+                </div>
+                <div id="day1-5pic2">
+                    <img src="./img/day1-5pic2.png">
+                </div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div id="day1-5-1a" class="day-text">
+                    <p>“Thanks … My name is Hedda. I am glad to meet you.” The girl says in a sweet tone.</p>
+                    <p>She has flowing golden curls and ivory skin. Her blue eyes, like the sea under summer sunlight, are clear and bright.</p>
+                    <br>
+                    <br>
+                    <a onclick="show('day1-5-1b');hide('day1-5-1a')">“I am Petra, Nice to meet you.”</a>
+                    <br>
+                    <br>
+                    <a onclick="relationadd('5');show('day1-5-1b');hide('day1-5-1a')">“You are so beautiful. I … I am Petra”</a>
+                </div>
+                <div id="day1-5-1b" class="day-text">
+                    <p>Hedda gives you a smile that just seems so genuinely sweet with just the right touch of shyness that unexpected warmth rushes through you.</p>
+                    <p>“So … what are you selling here?” she leans close, picks up a glass box and inhales the scent.</p>
+                    <br>
+                    <br>
+                    <a onclick="show('day1-5-1c');hide('day1-5-1b')">“Oh, take care. It’s a self-made One-night Elixir."</a>
+                    <br>
+                    <br>
+                    <a onclick="show('day1-5-1c');relationsub('1');hide('day1-5-1b')">“Don’t broke it, it’s self-made magic liquid. Super powerful.”</a>
+                </div>
+                <div id="day1-5-1c" class="day-text">
+                    <p>“Amazing! You know magic! You want to help people with your magic, right?” she is delighted.</p>
+                    <br>
+                    <br>
+                    <a onclick="relationsub('10');hide('day1-5-1c');show('day1-5-1d')">“No … not really, I just want to make some money.”</a>
+                    <br>
+                    <br>
+                    <a onclick="relationsub('20');hide('day1-5-1c');show('day1-5-1d1')">“Yeah, but my magic is limited, these are not true elixir.“</a>
+                </div>
+                <div id="day1-5-2a" class="day-text">
+                    <p>“Thanks … My name is Hedda. I am glad to meet you.” The girl says in a sweet tone.</p>
+                    <p>She has flowing golden curls and ivory skin. Her blue eyes, like the sea under summer sunlight, are clear and bright.</p>
+                    <br>
+                    <br>
+                    <a onclick="show('day1-5-2b');hide('day1-5-2a')">“I am Petra, Nice to meet you.”</a>
+                    <br>
+                    <br>
+                    <a onclick="relationadd('5');show('day1-5-2b');hide('day1-5-2a')">“You are so beautiful. I … I am Petra”</a>
+                </div>
+                <div id="day1-5-2b" class="day-text">
+                    <p>Hedda gives you a smile that just seems so genuinely sweet with just the right touch of shyness that unexpected warmth rushes through you.</p>
+                    <p>“So … what are you selling here?” she leans close, picks up a glass box and stares at the Puffskein inside.</p>
+                    <br>
+                    <br>
+                    <a onclick="show('day1-5-2c');hide('day1-5-2b')">“Oh, take care. There are self-made Puffskein elfins.”</a>
+                    <br>
+                    <br>
+                    <a onclick="show('day1-5-2c');relationsub('1');hide('day1-5-2b')">“Don’t frighten them. They are self-made elfins. Super timid.”</a>
+                </div>
+                <div id="day1-5-2c" class="day-text">
+                    <p>“They are so cute. It’s amazing you have magic! How did you come up with this idea? You are so imaginative!” she is delighted.</p>
+                    <br>
+                    <br>
+                    <a onclick="relationsub('10');hide('day1-5-2c');show('day1-5-2d')">“I am not mean to … they are disasters, I cannot sell them out.”</a>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-5-2c');show('day1-5-2d')">“I am glad you like them. But not everyone has a same heart like you.”</a>
+                </div>
+                <div id="day1-5-2d" class="day-text">
+                    <p>“Oh, don’t talk like that. How about we set them free?”</p>
+                    <br>
+                    <br>
+                    <a id="day1-a" onclick="relationsub('1');show('day1-5-2da');hide('day1-b')">“Yeah, but they won’t live long, my magic is flawed.”</a>
+                    <br>
+                    <br>
+                    <a id="day1-b" onclick="relationadd('2');show('day1-5-2db');hide('day1-a')">“Why not! I am totally agree with you.“</a>
+                    <div id="day1-5-2da">
+                        <p> “Don’t worry, at least they have freedom in their life.” Hedda lowers her head.</p>
+                        <p>Clean up the stall, you ask</p>
+                        <br>
+                        <a onclick="show('day1-5-1e');hide('day1-5-2d')">“Why you hide for soldiers?”</a>
+                        <br>
+                        <br>
+                        <a onclick="show('day1-5-1e');hide('day1-5-2d')">“Where are you come from?”</a>
+                        <br>
+                        <br>
+                        <a onclick="relationadd('5');show('day1-5-1epp');hide('day1-5-2d')">“How about we hangout around after that, it’s festival day!”</a>
+                    </div>
+                    <div id="day1-5-2db">
+                        <p>Clean up the stall, you ask</p>
+                        <br>
+                        <a onclick="show('day1-5-1e');hide('day1-5-2d')">“Why you hide for soldiers?”</a>
+                        <br>
+                        <br>
+                        <a onclick="show('day1-5-1e');hide('day1-5-2d')">“Where are you come from?”</a>
+                        <br>
+                        <br>
+                        <a onclick="relationadd('5');show('day1-5-1epp');hide('day1-5-2d')">“How about we hangout around after that, it’s festival day!”</a>
+                    </div>
+                </div>
+                <div id="day1-5-1d" class="day-text">
+                    <p>“Well, at least, you support yourself.” she replied.</p>
+                    <p>“That's true”, you proceed,</p>
+                    <br>
+                    <br>
+                    <a onclick="show('day1-5-1e');hide('day1-5-1d')">“Why you hide for soldiers?”</a>
+                    <br>
+                    <br>
+                    <a onclick="show('day1-5-1e');hide('day1-5-1d')">“Where are you come from?”</a>
+                    <br>
+                    <br>
+                    <a onclick="relationadd('5');show('day1-5-1epp');hide('day1-5-1d')">“How about we hangout together, it’s festival day!”</a>
+                </div>
+                <div id="day1-5-1d1" class="day-text">
+                    <p>“What? You cannot sell fake Elixirs. You are a liar.” she seems a little rattled. </p>
+                    <p>“No, no, I am not a liar. I just want to help people as much as I can. My magic is flawed. I can only make this happy potions to enlight people. I have tried.”<span onclick="relationadd('30');show('day1-5-1d1p')">you say.</span></p>
+                    <div id="day1-5-1d1p">
+                        <p>“I am sorry”, Hedda lowers her head.</p>
+                        <p>“Never mind”, you proceed,</p>
+                        <br>
+                        <br>
+                        <a onclick="show('day1-5-1e');hide('day1-5-1d1')">“Why you hide for soldiers?”</a>
+                        <br>
+                        <br>
+                        <a onclick="show('day1-5-1e');hide('day1-5-1d1')">“Where are you come from?”</a>
+                        <br>
+                        <br>
+                        <a onclick="relationadd('5');show('day1-5-1epp');hide('day1-5-1d1')">“How about we hangout together, it’s festival day!”</a>
+                    </div>
+                </div>
+                <div id="day1-5-1e" class="day-text">
+                    <p>“I … I …Can I keep this as a secret.” she looks down to ground and then up quickly, “How about we hangout around, it’s festival day!”</p>
+                    <p><span onclick="show('day1-5-1ep')">You nod.</span></p>
+                    <br>
+                    <br>
+                    <div id="day1-5-1ep">
+                        <a onclick="hide('day1-5-1');show('day1-6-1')">Go west to Lucid Gardens</a>
+                        <br>
+                        <br>
+                        <a onclick="hide('day1-5-1');show('day1-6-2')">Go east to Barter Bazaar</a>
+                    </div>
+                </div>
+                <div id="day1-5-1epp" class="day-text">
+                    <p>"Great idea!" she nods</p>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-5-1');show('day1-6-1')">Go west to Lucid Gardens</a>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-5-1');show('day1-6-2')">Go east to Barter Bazaar</a>
+                </div>
+            </div>
+        </div>
+        <div id="day1-6-1" class="pages">
+            <div class="left-module">
+                <div id="day1-6pic1"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div id="day1-6-1a" class="day-text">
+                    <p>The garden is a haven of stillness amid the noise and bustle of the streets outside. The bonsai trees lined the perfect lawn around several delicate pavilions. In the center there was a hedge maze with flowering lily pads.</p>
+                    <p>You and Hedda walk along the rocky path chatting about the new castle of the King.</p>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-6-1a');show('day1-6-1b')">You spent a whole afternoon together.</a>
+                </div>
+                <div id="day1-6-1b" class="day-text">
+                    <p>As the light drains away there is barely enough even make a shadow, It’s time to leave.</p>
+                    <p>“I have to go home now.” Hedda says reluctantly.</p>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-6-1');show('day1-7');show('day1-7-1');relationadd('10')">Sent her a gift</a>
+                    <br>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-6-1');show('day1-7');show('day1-7-2');relationadd('5')">Walk her home</a>
+                </div>
+            </div>
+        </div>
+        <div id="day1-6-2" class="pages">
+            <div class="left-module">
+                <div id="day1-6pic2"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div id="day1-6-2a" class="day-text">
+                    <p>The sidewalks are crowded with stalls selling backed goods, fresh fruits, home-made trinkets, pot plants and herbs. This is the Barter Bazaar, a place that is always drowning in the sea of people.</p>
+                    <p>You and Hedda move between stall holders who are shouting out their special deals.</p>
+                    <p>Hedda is extremely excited as if she had never been there before.</p>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-6-2a');show('day1-6-2b')">You spent a whole afternoon together.</a>
+                </div>
+                <div id="day1-6-2b" class="day-text">
+                    <p>The daylight has dwindled to a barely perceptible lightening of the gloom. Stall holders clean their wares one after another. </p>
+                    <p>“I have to go home now.” Hedda says reluctantly.</p>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-6-2');show('day1-7');show('day1-7-1');relationadd('10')">Sent her a gift</a>
+                    <br>
+                    <br>
+                    <br>
+                    <a onclick="hide('day1-6-2');show('day1-7');show('day1-7-2');relationadd('5')">Walk her home</a>
+                </div>
+            </div>
+        </div>
+        <div id="day1-7" class="pages">
+            <div class="left-module">
+                <div id="day1-7pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day1-1title"></div>
+                <div class="day-text">
+                    <div id="day1-7-1">
+                        <p> “Hedda, wait.” you hurry, “before you leave, can I give you a gift.” You come up with a silver <span onclick="show('day1-7pic')">bracelet</span> with four inlaid gemstones.</p>
+                        <p>“It’s amazingly beautiful.” Hedda exclaims, but next moment, she frowns, “Why there is an empty hole there, is something missing?”</p>
+                        <p>“No, that is something I have not found yet. It’s a magic bracelet, my mom told me if I collected all five gemstones, the magic will work.”</p>
+                        <p>“I will keep it well.” she smiles, “hope we could meet again.”</p>
+                        <p>“We will. Goodbye, Hedda” you wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
+                    </div>
+                    <div id="day1-7-2">
+                        <p>”Can I walk you home?” you ask.</p>
+                        <p>“Oh, sorry, I am afraid … my dad…” she murmurs.</p>
+                        <p>“Understand.” you smile. “before you leave, can I give you a gift.” You come up with a silver <span onclick="show('day1-7pic')">bracelet</span> with four inlaid gemstones.</p>
+                        <p>“It’s amazingly beautiful, but why there is an empty hole there, is something missing”</p>
+                        <p>“No, that is something I have not found yet. It’s a magic bracelet, if all five gemstones are collected, the magic will work.”</p>
+                        <p>“I will keep it well.” she smiles, “hope we could meet again.”</p>
+                        <p>You wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
+                    </div>
+                    <div id="day1-7-3">
+                        <p>“Well. Goodbye, Hedda” you wave to her and <a onclick="hide('day1-7');show('day2-1')">go back home</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--day2-->
+        <!--day2-->
+        <!--day2-->
+        <div id="day2-1" class="pages">
+            <div class="left-module">
+                <div class="day-text-left" id="day2-1-0">
+                    <p>When you wake up in the morning you realize your mom is still not home.</p>
+                    <p>You decide to:</p>
+                    <br>
+                    <br>
+                    <a onclick="show('day2-1-1')">sneak into her workshop</a>
+                    <br>
+                    <br>
+                    <br>
+                    <a onclick="show('day2-1-2')">hangout to have fun</a>
+                    <br>
+                    <br>
+                    <br>
+                    <a onclick="show('day2-1-3')">explore the King’s new castle</a>
+                </div>
+                <div id="day2-1pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day2-1title"></div>
+                <div class="day-text">
+                    <div id="day2-1-1">
+                        <p>“What shall I make today?” you ask yourself while turning a witchery book page after page.</p>
+                        <p>A Witchcraft catches your eye — <span onclick="hide('day2-1-0');show('day2-1-4');show('day2-1pic')">“How to transfer into a bird?”</span></p>
+                    </div>
+                    <div id="day2-1-2">
+                        <p>“What’s up for today?” you ask yourself and suddenly you have a good idea, you decide to explore the Mad King’s castle.</p>
+                        <p>You walk into your mom’s workshop to find out a way that allows you to sneak into the castle secretly.</p>
+                        <p>Ten minutes later, a page from a witchery book catches your eye — <span onclick="hide('day2-1-0');show('day2-1-4');show('day2-1pic')">“How to transfer into a bird?”</span></p>
+                    </div>
+                    <div id="day2-1-3">
+                        <p>“How can I sneak into the Mad King’s castle?” you ask yourself and suddenly you have a good idea, you decide to find out a magic in your mom’s workshop.</p>
+                        <p>Ten minutes later, a page from a witchery book catches your eye — <span onclick="hide('day2-1-0');show('day2-1-4');show('day2-1pic')">“How to transfer into a bird?”</span></p>
+                    </div>
+                    <div id="day2-1-4">
+                        <p>You follow it.</p>
+                        <p>Next moment, you find yourself <a onclick="hide('day2-1');show('day2-2')">turn into a bird</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day2-2" class="pages">
+            <div class="left-module">
+                <div id="day2-2-1pic"></div>
+                <div id="day2-2-2pic"></div>
+                <div id="day2-2-3pic"></div>
+                <div id="day2-2-4pic"></div>
+                <div id="day2-2-5pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day2-1title"></div>
+                <div class="day-text">
+                    <div id="day2-2-1">
+                        <p>You <span onclick="hide('day2-2-1pic');hide('day2-2-3pic');hide('day2-2-4pic');hide('day2-2-5pic');show('day2-2-2pic')">fly</span> out of your home <span onclick="hide('day2-2-2pic');hide('day2-2-1pic');hide('day2-2-4pic');hide('day2-2-5pic');show('day2-2-3pic')">towards the castle</span>.</p>
+                        <p>It is when you <span onclick="hide('day2-2-3pic');hide('day2-2-1pic');hide('day2-2-2pic');hide('day2-2-5pic');show('day2-2-4pic')">past a high tower</span>, you see a girl crouched against the widow with pearl-shaped tears rolling down her cheeks from wide luminous eye.</p>
+                        <p>“Dad, you promised me, you promised me won't get angry. You know, your anger hurts me, hurts your people, hurts yourself. I cannot ignore your pain under your madness. I don’t know what I can do for you.”</p>
+                        <p><span onclick="hide('day2-2-1pic');hide('day2-2-2pic');hide('day2-2-3pic');hide('day2-2-4pic');show('day2-2-5pic')">It’s Hedda.</span></p>
+                        </br>
+                        <a onclick="hide('day2-2-1');show('day2-2-2');hide('day2-2-1pic');hide('day2-2-2pic');hide('day2-2-3pic');hide('day2-2-4pic');show('day2-2-5pic')">You land on the widow-sill silently not to disturb her</a></br>
+                        </br>
+                        <a onclick="hide('day2-2-1');show('day2-2-3');hide('day2-2-1pic');hide('day2-2-2pic');hide('day2-2-3pic');hide('day2-2-4pic');show('day2-2-5pic')">You battle your wings to arouse her attention</a>
+                    </div>
+                    <div id="day2-2-2">
+                        <p>A couple minutes later, a screaming breaks all the silence.</p>
+                        <p>You look up to find Hedda has already escape to the corner.</p>
+                        <p>“Don’t be afraid, I am Petra” you hasten to explain and it is then you realize your magic went wrong and you have partly change back to human with only one wing left.</p>
+                        </br>
+                        <a onclick="hide('day2-2-2');show('day2-2-4');relationadd('2')">“Hedda, I don't mean to bother you.”</a></br>
+                        </br>
+                        <a onclick="hide('day2-2-2');show('day2-2-5')">“Hedda, I cannot believe I'm seeing here.”</a>
+                    </div>
+                    <div id="day2-2-3">
+                        <p>Hedda looks at you, “little bird, you can hear me?”</p>
+                        <p>You nod, but then you see the surprised, yet delighted expression shown on her face.</p>
+                        <p>“Petra, it’s you!” Hedda exclaims.</p>
+                        <p>“What? How do you know?” you cry out and it is then you find your magic went wrong and you have partially changed back to human with only one wing left.</p>
+                        </br>
+                        <a onclick="hide('day2-2-3');show('day2-2-4');relationadd('2')">“Hedda, I don't mean to bother you.”</a></br>
+                        </br>
+                        <a onclick="hide('day2-2-3');show('day2-2-5')">“Hedda, I cannot believe I'm seeing you here.”</a>
+                    </div>
+                    <div id="day2-2-4">
+                        <p>“No, no.” Hedda seems don’t know how to reply.</p>
+                        <p>there is an awkward silence.</p>
+                        <p>Eventually, you speak softly,</p></br>
+                        </br>
+                        <a onclick="hide('day2-2');show('day2-3');relationadd('5')">"Could you give me a chance to help you?"</a>
+                    </div>
+                    <div id="day2-2-5">
+                        <p>“Yeah.” Hedda seems don’t know how to reply.</p>
+                        <p>there is an awkward silence.</p>
+                        <p>Eventually, you speak softly,</p>
+                        </br>
+                        </br>
+                        <a onclick="hide('day2-2');show('day2-3');relationadd('5')">"Could you give me a chance to help you?"</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day2-3" class="pages">
+            <div class="left-module">
+                <div id="day2-3pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day2-1title"></div>
+                <div class="day-text">
+                    <p>You carry Hedda out of the castle towards your home to ask for help from your mom. You told Hedda your mom is a witch and the crystal ball magic could help Hedda find out the reason for her father’s madness.</p>
+                    <p>Hedda followed your advice and now she is holding your clothes firmly escaping from the castle room. </p>
+                    <p>With only one wing to fly, you have to gather all your strength to balance.</p>
+                    <p>You smell the aroma of the grass, you are close to the land. </p>
+                    <p>But suddenly, you feel you cannot lift the weight anymore.</p>
+                    </br>
+                    <a onclick="hide('day2-3');show('day2-4')">all your magic is expired now.</a>
+                </div>
+            </div>
+        </div>
+        <div id="day2-4" class="pages">
+            <div class="left-module">
+                <div id="day2-4pic"></div>
+                <div id="day2-4pic2"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day2-1title"></div>
+                <div class="day-text">
+                    <div id="day2-4-1">
+                        <p>You and Hedda plummet down, down, down. The air scramble past you and your heart leaps and begins charging at your chest.</p>
+                        </br>
+                        </br>
+                        <a onclick="hide('day2-4-1');show('day2-4-2');hide('day2-4pic');show('day2-4pic2');relationadd('5')">“I have to save Hedda”, you tell yourself.</a></br>
+                        </br>
+                        <a onclick="hide('day2-4-1');show('day2-4-3');relationsub('20')">“Damn it!”, you shout.</a>
+                    </div>
+                    <div id="day2-4-2">
+                        <p>You struggle in air to hold Hedda firmly. At last, you hear a hard thud, a gasp.</p>
+                        <p>Silence.</p>
+                        <p>You caught her, you saved her.</p>
+                        <p>A killing pain knifes your back. But you feel your face red and your heart beat fast.</p>
+                        <p>Hedda is on top of you.</p>
+                        </br>
+                        <p>She is <a onclick="hide('day2-4');show('day2-5');relationadd('15')">kissing you</a>.</p>
+                    </div>
+                    <div id="day2-4-3">
+                        <p>At last, you hear a hard thud, a gasp. </p>
+                        <p>“Petra! Are you okay?” Hedda leans to you.</p>
+                        <p>“Oh, my body aches.” you frown. “But I am fine.”</p>
+                        <p>Clutching each other, you and Hedda <a onclick="hide('day2-4');show('day2-5')">walk home</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day2-5" class="pages">
+            <div class="left-module">
+                <div id="day2-5pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day2-1title"></div>
+                <div class="day-text">
+                    <p>When you and Hedda arrive at your mom’s workshop, she is tinkering with her crooked cauldron.</p>
+                    <p>“You damn lousy kid!” exclaims your mom, “Look at what you did!” </p>
+                    <p>“Ms. Katharina” — Your mom stops bumping you on the head with her broom when she hears a soft voice coming from a beautiful girl.</p>
+                    <p>“Oh, you are?” Ms. Katharine asks.</p>
+                    <p>“I am Hedda, Petra’s friend. I am here to ask for your help.” Hedda says sincerely.</p>
+                    <p>You <a onclick="hide('day2-5');show('day2-6')">tell everything to your mom</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="day2-6" class="pages">
+            <div class="left-module">
+                <div id="day2-6pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day2-1title"></div>
+                <div class="day-text">
+                    <div id="day2-6-0">
+                        <p>“Come with me.” Ms. Katharina comes out of a crystal ball, asks Hedda put her hand on it and speaks out spells.</p>
+                        <p>Seconds later, her face turns extremely pale. </p>
+                        <p>She chokes down her rage turning to Hedda. “Get out of my house. Now!”</p>
+                        <p>“What? Mom, what happened?” you exclaim.</p>
+                        <p>“Sorry, I am …” Hedda rushes out crying.</p>
+                        </br>
+                        <a onclick="hide('day2-6-0');show('day2-6-1');relationadd('5')">Chase after Hedda</a></br>
+                        </br>
+                        <a onclick="hide('day2-6-0');show('day2-6-2')">Argue with your mom</a>
+                    </div>
+                    <div id="day2-6-1">
+                        <p>You are about to chase Hedda out of the foor before it's too late. Your mom stops you.</p>
+                        <p>“Mom, let me go, this isn't like you. You cannot treat Hedda like this!” you shout.</p>
+                        <p>“You don’t understand. She is the princess!” Fires of fury and hatred are smoldering in her small narrowed eyes as she speaks out these words.</p></br>
+                        <a onclick="hide('day2-6');show('day3-1')">"What?"</a>
+                    </div>
+                    <div id="day2-6-2">
+                        <p>“Mom, this isn't like you. You cannot treat Hedda like this!” you shout.</p>
+                        <p>“You don’t understand. She is the princess!” Fires of fury and hatred are smoldering in her small narrowed eyes as she speaks out these words.</p></br>
+                        <a onclick="hide('day2-6');show('day3-1')">"What?"</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--day3-->
+        <!--day3-->
+        <div id="day3-1" class="pages">
+            <div class="left-module">
+                <div class="day-text-left">
+                    <p>“If Hedda is a princess, her father must be the King. From Hedda’s words, her father might be enchanted to be madness. Mom detests Hedda. How does she know Hedda?</p>
+                    <p>No, Hedda hasn’t come out of the castle before. What if mom knows anyone else related to Hedda? Mom knows magic. Might there be a link between mom and the King?”</p>
+                </div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day3-1title"></div>
+                <div class="day-text">
+                    <p>You spent whole night thinking.</p>
+                    <p>Near Dawn, you decide to snoop around to help find the answers.</p>
+                    <p>You creep down to the secret basement.</p>
+                    <p>The basement door which you had so often tried in vain to open, stood ajar. </p></br>
+                    <a onclick="hide('day3-1');hide('main');show('day3-2')">You step into the room.</a>
+                </div>
+            </div>
+        </div>
+        <div id="day3-3" class="pages">
+            <div class="left-module">
+                <div class="day-text-left">
+                    <div id="day3-3-0">
+                        <p>After you step out of the room, you decide to</p></br></br>
+                        <a onclick="show('day3-3-1');hide('day3-3-0')">Ask your mom directly</a></br></br></br>
+                        <a onclick="show('day3-3-2');hide('day3-3-0');show('day3-3-2pic')">Tell all these to Hedda</a>
+                    </div>
+                    <div id="day3-3-2pic"></div>
+                    <div id="day3-3-1pic"></div>
+                </div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day3-1title"></div>
+                <div class="day-text">
+                    <div id="day3-3-1">
+                        <p>You walk upstairs, pass through a hallway and stop in front of a room at the end of the corridor. “I cannot ask my mom directly, she might still be angry now.” you hesitate for a while. and finally, you decide to</p></br></br>
+                        <a onclick="show('day3-end');hide('day3-3')">Still ask your mom.</a></br></br></br>
+                        <a onclick="show('day3-3-2');hide('day3-3-1');show('day3-3-2pic')">Tell all these to Hedda</a>
+                    </div>
+                    <div id="day3-3-2">
+                        <p>“I should tell all these to Hedda, she might know more than I do. But do I find her?” you wonder.</p>
+                        <p>Soon you have a good idea. You come out of a magic ball to <span onclick="Twosecond()">scry</span> where she is.</p>
+                        <p>“Oh, damn it!” you exclaim. Your magic only last for 2 seconds.</p>
+                        <p>You guess, she might be </br></br><a onclick="show('day3-3-3')">in the woods</a>; <a onclick="relationsub('10')">in the castle</a>; <a onclick="relationsub('10')">in the Lucid Garden</a></p>
+                        <div id="day3-3-3">
+                            <p>“She is in the woods! Why she is there?” you feel something bad happened and hurry out</p></br>
+                            <a onclick="show('day3-4');hide('day3-3')">into the woods.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day3-end" class="pages">
+            <div id="end1">
+                <div id="end-title"></div>
+                <p>You push the wooden door open. “Mom, I …” you say.</p>
+                <p>“If you want to talk about Hedda, please shut up and close the door behind you.”</p>
+                <p>“Mom, are you still living in the past?” exclaim you.</p>
+                <p>“Of course I do! I have stolen the magic stone from the Hell. I burned down the town of Altenburg, I was expelled from my hometown. I was whipped as a prisoner. All I have experienced is for him to become a king. But now, I am in this grimy mildewed shack. I am the grisly witch. I hate him. I hate everything connected with him. I will never allow you to develop even the tiniest bit of a relationship with his daughter."</p>
+                <p>Mrs. Katharina gets mad and ties you up with magical robe.</p>
+            </div>
+        </div>
+        <div id="day3-4" class="pages">
+            <div class="left-module">
+                <div id="day3-4pic"></div>
+                <div id="day3-4pic2"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day3-1title"></div>
+                <div class="day-text">
+                    <div id="day3-4-1">
+                        <p>“Hedda, where are you!” you call through the woods and finally find Hedda there huddled up against a tree.</p>
+                        <p>She is lost and has stayed in the woods for the whole night.</p></br>
+                        <a onclick="show('day3-4-2');hide('day3-4-1');relationadd('10')">“Hedda, it’s my fault.” you hold her in arms.</a></br></br>
+                        <a onclick="show('day3-4-3');hide('day3-4-1');relationadd('5')">“Hedda, has anything hurts you?” you lean towards her.</a>
+                    </div>
+                    <div id="day3-4-2">
+                        <p>For five whole minutes you hold her in arms and kiss her again and again. She looks at your face and then bursts into tears.</p>
+                        <p>“I knew you would come.” Hedda cries.</p>
+                        <p>After Hedda wiped her eyes dry, you <a onclick="show('day3-4-4');hide('day3-4-2')">tell everything</a> you find in the basement to her.</p>
+                    </div>
+                    <div id="day3-4-3">
+                        <p>She looks at your face and then bursts into tears.</p>
+                        <p>“I knew you would come.” Hedda cries.</p>
+                        <p>After Hedda wiped her eyes dry, you <a onclick="show('day3-4-4');hide('day3-4-2');hide('day3-4-3')">tell her everything</a> you find in the basement.</p>
+                    </div>
+                    <div id="day3-4-4">
+                        <p>“So, Ms. Katharina and my father are former lovers.” Hedda is astonished, “and she helped my father plot!”</p>
+                        <p>“Yeah, I guess the King’s madness is a result of the curse. The curse is related to the magic stone.” You say. </p>
+                        <p>“Oh I remember,” she stops and then proceeds, “I noticed my father’s strange power to control human minds, a lot of people died because of this. We should find the magic stone and break it, then the curse will disappear as well!”</p>
+                        <p>"But it's too late. We'd better stay here tonight" <span onclick="show('day3-4-4-1');hide('day3-4-4')">You say.</span></p>
+                    </div>
+                    <div id="day3-4-4-1">
+                        <p>Hedda agrees with you.</p>
+                        <p>You notice the chilly wind makes Hedda shiver.</p></br>
+                        <a onclick="show('day3-4-5');hide('day3-4-4-1');relationadd('5')">You throw your cloak around Hedda</a></br></br>
+                        <a onclick="show('day3-4-6');hide('day3-4-4-1');show('day3-4pic2');hide('day3-4pic');relationsub('10')">You create a bonfire for Hedda through magic</a>
+                    </div>
+                    <div id="day3-4-5">
+                        <p>“You must be cold”, you throw your cloak around Hedda and hold her in your arms.</p>
+                        <p>“Thanks, It’s so nice to have you with me.” Hedda smiles.</p>
+                        <p>You and Hedda stay there the whole night, just like that, eventually <a onclick="show('day4-1');hide('day3-4')">falling asleep</a>.</p>
+                    </div>
+                    <div id="day3-4-6">
+                        <p>You touch a piece of wood with your left hand and speak a spell.</p>
+                        <p>The whole world is illuminated.</p>
+                        <p>Suddenly, Hedda’s scream cuts your complacency. Her dress caught on fire due to the uncontrolled bonfire.</p>
+                        <p>You hasten to put out the fire with your cloak, “Sorry, I just, my magic…”.</p>
+                        <p>Hedda shakes her head and smiles.</p>
+                        <p>You and Hedda stay there the whole night, just like that, eventually <a onclick="show('day4-1');hide('day3-4')">falling asleep</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--day4-->
+        <!--day4-->
+        <div id="day4-1" class="pages">
+            <div class="left-module">
+                <div id="day4-1pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day4-1title"></div>
+                <div class="day-text">
+                    <div id="day4-1-1">
+                        <p>You wake up. In the gray shadow of dawn you see several bubbles floating in the air not far away from you.</p>
+                        <p>These bubbles drift up and down, under the dim lights from the sky reflecting a series of colorful images.</p></br>
+                        <a onclick="show('day4-2');hide('day4-1')">You approach these bubbles silently.</a></br></br>
+                        <a onclick="show('day4-1-2');hide('day4-1-1');relationsub('5')">You wake Hedda up</a></br></br>
+                        <a onclick="show('day5-1');hide('day4-1')">You go back to sleep</a>
+                    </div>
+                    <div id="day4-1-2">
+                        <p>“Hedda, look there.” you point to the bubbles.</p>
+                        <p>“Just ordinary bubbles.” Hedda squints and rubes her bleary eyes.</p></br>
+                        <a onclick="show('day5-1');hide('day4-1')">You yawn and go back to sleep.</a></br></br>
+                        <a onclick="show('day4-2');hide('day4-1')">You approach these bubbles silently.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day4-2" class="pages">
+            <div class="left-module">
+                <div id="day4-2pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day4-1title"></div>
+                <div class="day-text">
+                    <p>When you approach, scenes of the past show up on the bubbles. </p>
+                    <p>The first scene depicts a loving couple being punished to death by new King because of the power struggles.</p>
+                    <p>The second shows before death, the woman hided her baby inside a cave.</p>
+                    <p>The last one shows a witch saved the baby and raised the baby up.</p>
+                    <p>“That baby is me! That witch is my mom! The King is Hedda’s father!” you stand still there long long until <a onclick="show('day4-3');hide('day4-2')">the dawn falls.</a></p>
+                </div>
+            </div>
+        </div>
+        <div id="day4-3" class="pages">
+            <div class="left-module">
+                <div id="day4-3pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day4-1title"></div>
+                <div class="day-text">
+                    <div id="day4-3-1">
+                        <p>The sun poured out it's brilliant lights into the woods.</p>
+                        <p>“Petra” you hear someone call you gently. </p>
+                        <p>Hedda lays her slim hand on your back “What’s up, darling, you woke up so early.”</p>
+                        <p>ou turn to her, look her in the eyes. So long.</p></br>
+                        <a onclick="hide('day4-3-1');show('day4-3-2');relationadd('10');show('day5-2-1');hide('day5-2-2')">You tell the bubble scenes to Hedda</a></br></br>
+                        <a onclick="hide('day4-3');show('day5-1')">You hide the bubble scenes from Hedda</a></br></br>
+                        <a onclick="hide('day4-3-1');show('day4-3-3')">You remain silence.</a>
+                    </div>
+                    <div id="day4-3-2">
+                        <p>“Hedda, I don’t know how to face our relationship. I … I am an orphan, my parents died. Your father killed them. I cannot let it go. I … I think maybe we should break up. Hedda, I am so sorry for this.” You say.</p>
+                        <p>Hedda’s face turns pale, her mouth opens.</p>
+                        <p>“Petra, please, please don’t.” she says in a trembling voice. “Your parents have already dead, we cannot change the past. But we can change the future. My father is still mad, more and more people will die. We should stop this. We should destroy the magic stone. After that, you could leave. Yes?”</p></br>
+                        <a onclick="hide('day4-3-2');show('day4-3-4');relationadd('3')">You agree with Hedda.</a></br></br>
+                        <a onclick="hide('day4-3-2');show('day4-3-5')">You remain silence.</a>
+                    </div>
+                    <div id="day4-3-3">
+                        <p>Hedda stares at you. There is a gentleness in her eyes.</p>
+                        <p>“Petra, if you don’t want me to know. I won’t ask anymore. But please remember, I will always on your side.” she says to you.</p></br>
+                        <a onclick="hide('day4-3-3');show('day4-3-2');relationadd('5');show('day5-2-1');hide('day5-2-2')">You tell the bubble scenes to Hedda</a></br></br>
+                        <a onclick="hide('day4-3');show('day5-1')">You hug Hedda for a while, then head for the castle</a>
+                    </div>
+                    <div id="day4-3-4">
+                        <p>Hedda smiles through tears, she proceeds “I have an idea. After we arrive at the castle, I will leave and you ask the King about the magic of mental manipulation. He will be alerted, then you tell him you are a wizard, you know how to control the stone. “</p>
+                        <p>“But I don’t know.” you say.</p>
+                        <p>“Of course, you don’t. But my dad will try to control you to speak it out. He will use the magic stone to manipulate you. Then we will have a chance to destroy it.” Hedda says.</p></br>
+                        <a onclick="hide('day4-3');show('day5-1');relationadd('10')">“Hedda, it’s really a good idea.”</a></br></br>
+                        <a onclick="hide('day4-3');show('day5-1');relationadd('5')">“Well, your idea is not bad.”</a>
+                    </div>
+                    <div id="day4-3-5">
+                        <p>You looks down to the ground silently.</p>
+                        <p>“Petra, I remember, you said, you are destined to be a great wizard, you want to help people as much as you can!” Hedda stares at you emphasizing every word that she utters.</p></br>
+                        <a onclick="hide('day4-3-5');show('day4-3-4');relationadd('3')">You agree with Hedda.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--day5-->
+        <!--day5-->
+        <div id="day5-1" class="pages">
+            <div class="left-module">
+                <div id="day5-1pic"></div>
+                <div id="day5-1pic1"></div>
+                <div id="day5-1pic2"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day5-1title"></div>
+                <div class="day-text">
+                    <div id="day5-1-1">
+                        <p>It takes you a whole day to walk out of the forest. When you reach the castle, it’s already the next evening.</p>
+                        <p>Saw his daughter back safe, the King decide to host a rich supper for you.</p>
+                        <p>Hedda goes her room for a hot bath. You are left there.</p></br>
+                        <a onclick="hide('day5-1-1');show('day5-1-2');hide('day5-1pic');show('day5-1pic1')">“Your majesty, do you remember Ms. Katharina?” you ask.</a></br></br>
+                        <a onclick="hide('day5-1-1');show('day5-1-3');hide('day5-1pic');show('day5-1pic1')">“Your majesty, have you heard of mental manipulation?” you ask.</a>
+                    </div>
+                    <div id="day5-1-2">
+                        <p>The corners of his mustache twitched, but then he allows himself a smile to you. “We will discuss this later.”</p>
+                        <p>You remain silence and stare at the King in the eyes.</p>
+                        <p>“Dad, you are all here.” a clear voice breaks the silence, Hedda proceeds “the food is ready.”</p></br>
+                        <a onclick="hide('day5-1');show('day5-2')">You follow them to the dining hall.</a>
+                    </div>
+                    <div id="day5-1-3">
+                        <p>The corners of his mustache twitched, but then he allows himself a smile to you, “No”</p>
+                        <p>“Oh, that’s too bad. I am a wizard, I have been studying a magic stone for fifteen years, and I kind of work out a spell to control it without touch it directly. But the stone is missing. I guess if your majesty don’t know about it. No one else in the world would know.” you say in a deep tone.</p>
+                        <p>The King’s eyes glitter with greedy and lust. After sending away his servant, the King lays his left hand on a stone on top of his <span onclick="hide('day5-1-3');show('day5-1-4');hide('day5-1pic1');show('day5-1pic2')">Sceptre</span>.</p>
+                    </div>
+                    <div id="day5-1-4">
+                        <p>You see slight glow under the King’s hand while you are gradually losing consciousness.</p>
+                        <p>“Dad, you are all here.” a clear voice breaks the silence. You recover to find the King has already moved his hand from the stone.</p>
+                        <p>“The food is ready” Hedda proceeds, “I am hungry now, dad.”</p>
+                        <p>“Sure, sure” the King smiles and pats Hedda on the head, “my little girl.”</p></br>
+                        <a onclick="hide('day5-1');show('day5-2')">You follow them to the dining hall.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day5-2" class="pages">
+            <div class="left-module">
+                <div id="day5-2pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day5-1title"></div>
+                <div class="day-text">
+                    <div id="day5-2-1">
+                        <p>You have never seen such a luxurious dinner before.</p>
+                        <p>Although there is a huge and elegant dinner table set with dozens of delicious dishes for you to pick from, you have no appetite at all.</p>
+                        <p>Eat half, a servant carries a pot of wine to you.</p>
+                        <p>“It’s a reward for you,” the King said “for you bring my princess back. Let’s drink.”</p></br>
+                        <a onclick="hide('day5-2-1');show('day5-2-4')">You hesitate.</a></br></br>
+                        <a onclick="hide('day5-2-1');show('day5-2-3')">You drink the wine</a>
+                    </div>
+                    <div id="day5-2-2">
+                        <p>You have never seen such a luxurious dinner before.</p>
+                        <p>There is a huge and elegant dinner table set with dozens of delicious dishes for you to pick from. You hurry to taste every dishes.</p>
+                        <p>Eat half, a servant carries a pot of wine to you.</p>
+                        <p>“It’s a reward for you,” the King said “for you bring my princess back. Let’s drink.”</p></br>
+                        <a onclick="hide('day5-2-2');show('day5-2-3')">You drink the wine</a>
+                    </div>
+                    <div id="day5-2-3">
+                        <p>You have a sip of the wine and put the pot down. </p>
+                        <p>Sharp pain lance through your stomach and colorful spots flashes in front of your eyes. Your whole body has been beaten and every movement causes some muscle or bone to ache.</p>
+                        <p>You hear Hedda crying, “Petra, Petra… Dad, what you have done to him… Petra, please please wake up.”</p></br>
+                        <a onclick="hide('day5-2');end()">You die.</a>
+                    </div>
+                    <div id="day5-2-4">
+                        <p>You hesitate for a while, if the King wants to kill you, a pot of poisoned wine would be the best choice.</p>
+                        <p>“What? You want to defy me?” fires of fury and hatred are smoldering in the King’s small narrowed eyes as he speaks, “Bernard, kill him!”</p>
+                        <p>Some soldiers with sharp weapons surround you.</p>
+                        <p>You grab a fork and whisper a spell towards it.</p></br>
+                        <a onclick="hide('day5-2');show('day5-3')">You want to get a sword.</a></br></br>
+                        <a onclick="hide('day5-2');show('day5-3')">You want to get a shield.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="day5-3" class="pages">
+            <div class="left-module">
+                <div id="day5-3pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day5-1title"></div>
+                <div class="day-text">
+                    <p>The next moment, you find what in your hand is a whip.</p>
+                    <p>“Oh my goodness. Look at what I get. My damn magic.” you shout. But suddenly you realized how good a whip is.</p>
+                    <p>You gather all your strength to wave the whip towards the King’s sceptre. </p>
+                    <p>You hear a loud crash and you feel a sword penetrate through your chest.</p>
+                    <p>“Petra—“</p></br>
+                    <a onclick="hide('day5-3');endBreak()">The King’s magic is broken. You die.</a>
+                </div>
+            </div>
+        </div>
+        <!--day6-->
+        <!--day6-->
+        <div id="day6-1" class="pages">
+            <div class="left-module">
+                <div id="day6-1pic0"></div>
+                <div id="day6-1pic"></div>
+            </div>
+            <div class="mid-module"></div>
+            <div class="right-module">
+                <div id="day6-1title"></div>
+                <div class="day-text">
+                    <div id="day6-1-1">
+                        <p>You wake up in your room with a great pain on your chest.</p>
+                        <p>Hedda sits by your side, looks at you. Her beautiful eyes sparkles with tears.</p>
+                        <p>“Am I dead?” you whisper.</p>
+                        <p>“Hedda saved you” Ms. Katharina says as she walking into the room.</p>
+                        <p>“It’s our love” Hedda holds your hand, “The magic bracelet, do you remember it. <span onclick="hide('day6-1pic');show('day6-1pic0')"> The last gemstone</span> you haven’t found before is my teardrops for you.”</p></br>
+                        <a onclick="hide('day6-1-1');show('day6-1-2')">You turn to look at Ms. Katharina</a>
+                    </div>
+                    <div id="day6-1-2">
+                        <p>“Mom, I …” you whisper.</p>
+                        <p>Ms. Katharina stops you, “Okay, I don’t want to tell you all these, but, you two stand the test from me.”</p>
+                        <p>“The test?” you and Hedda say together.</p>
+                        <p>“Hedda’s lost in wood is my idea. I left the secret room door open. I sent the bubbles to tell you the truth. I want to see your choices. You haven’t made me disappointed. I bless you.” Ms. Katharina says and then she walks out of the room.</p>
+                        <p>You gently touch Hedda’s face.</p></br>
+                        <a onclick="hide('day6-1');final()">“Hedda, I love you.”</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end no break-->
+    <!--end no break-->
+        <div id="endnobreak-love" class="pages">
+            <div class="left-module">
+                <div id="story-end-head"></div>
+                <div id="end-love-pic"></div>
+            </div>
+            <div class="mid-module-0"></div>
+            <div class="right-module">
+                <div id="score-more"><h2 class="re-text-big" id="nobreak-love-text">0</h2></div>
+                <div class="day-text">
+                </br></br>
+                    <p>Which activates the bracelet power to bring you back to life. </p>
+                    <p>But the magic stone is still in the King’s hand.</p>
+                    <p>He is mad and cruel.</p>
+                    <p>Can you and Hedda live happily</p>
+                    <p>ever after?</p></br></br>
+                    <a onclick="clear()">Play Once Again</a>
+                </div>
+                <div id="end-nobreak-pic"></div>
+            </div>
+        </div>
+
+        <div id="endbreak-love" class="pages">
+            <div class="left-module">
+                <div id="story-end-head"></div>
+                <div id="end-love-pic"></div>
+            </div>
+            <div class="mid-module-0"></div>
+            <div class="right-module">
+                <div id="score-more"><h2 class="re-text-big" id="break-love-text">0</h2></div>
+                <div class="day-text">
+                </br></br>
+                    <p>Which activates the bracelet power to bring you back to life. </p>
+                    <p>The magic stone is broken. </p>
+                    <p>The Mad King is not Mad anymore.</p>
+                    <p>You and Hedda live happily ever after. </p>
+                    <p>It’s an awesome ending.</p></br></br>
+                    <a onclick="clear()">Play Once Again</a>
+                </div>
+                <div id="end-break-pic"></div>
+            </div>
+        </div>
+
+        <div id="endbreak-nolove" class="pages">
+            <div class="left-module">
+                <div id="story-end-head"></div>
+                <div id="end-nolove-pic"></div>
+            </div>
+            <div class="mid-module-0"></div>
+            <div class="right-module">
+                <div id="score-less"><h2 class="re-text-big" id="break-nolove-text">0</h2></div>
+                <div class="day-text">
+                </br></br></br>
+                    <p>Which fails to activate the bracelet power to bring you back to life. But at least you have done one thing right.</p>
+                    <p>The magic stone is broken.</p>
+                    <p>The Mad King is not Mad anymore.</p></br></br>
+                    <a onclick="clear()">Play Once Again</a>
+                </div>
+                <div id="end-break-pic"></div>
+            </div>
+        </div>
+
+        <div id="endnobreak-nolove" class="pages">
+            <div class="left-module">
+                <div id="story-end-head"></div>
+                <div id="end-nolove-pic"></div>
+            </div>
+            <div class="mid-module-0"></div>
+            <div class="right-module">
+                <div id="score-less"><h2 class="re-text-big" id="nobreak-nolove-text">0</h2></div>
+                <div class="day-text">
+                </br></br></br>
+                    <p>Which fails to activate the bracelet power to bring you back to life. </p>
+                    <p>The magic stone is still in the King’s hand. He is mad and cruel.</p>
+                    <p>Hedda is distressed. </p>
+                    <p>Look at what you have done.</p></br></br>
+                    <a onclick="clear()">Play Once Again</a>
+                </div>
+                <div id="end-nobreak-pic"></div>
+            </div>
+        </div>
+    
+
+
+        
+
+
+    </div>
+    <!--workshop module2-->
+    <div id="day3-2">
+        <div id="secret-box" onclick="show('day3-2-1');show('day3-2-1-1');hide('day3-2-1-2');hide('day3-2-1-3')"></div>
+        <div id="secret-letter" onclick="show('day3-2-1');show('day3-2-1-2');hide('day3-2-1-1');hide('day3-2-1-3')"></div>
+        <div id="secret-pillow" onclick="show('day3-2-1');show('day3-2-1-3');hide('day3-2-1-1');hide('day3-2-1-2')"></div>
+        <div id="day3-2-1">
+            <div id="secret-pop">
+                <div id="day3-2-1-1">
+                    <div id="secret-magic"></div>
+                    <div class="secret-text">
+                        <p>An ordinary box. But wait. There is a note here: </p>
+                        <p>"A magic stone to help you manipulate other’s mind. </p>
+                        <p>Put your hand on it with one’s name in mind and speak out the spell…"</p>
+                        <p>But where is that stone?</p></br>
+                        <a onclick="hide('day3-2');show('day3-3');show('main')">Step out of the room</a></br></br>
+                        <a onclick="hide('day3-2-1')">Explore further</a>
+                    </div>
+                </div>
+                <div id="day3-2-1-2">
+                    <div id="secret-read"></div>
+                    <div class="secret-text">
+                        <p>Dear Katharina,</p>
+                        <p>I love you. That means I would defend you with my life even if the odds were insurmountable. It means I will dance and rejoice with you when times are good. It means I will never betray you, never give up on you. Your magic will assist me to be the King, you will share my honor. You will be the Queen. </p></br>
+                        <a onclick="hide('day3-2');show('day3-3');show('main')">Step out of the room</a></br></br>
+                        <a onclick="hide('day3-2-1')">Explore further</a>
+                    </div>
+                </div>
+                <div id="day3-2-1-3">
+                    <div id="secret-voodoo"></div>
+                    <div class="secret-text">
+                        <p>It’s Voodoo. There is a spell here:</p>
+                        <p>I curse you to be tormented by the tremendous heart pain when you touch the magic stone. You will enjoy your power but suffered with your madness forever until you die.</p></br>
+                        <a onclick="hide('day3-2');show('day3-3');show('main')">Step out of the room</a></br></br>
+                        <a onclick="hide('day3-2-1')">Explore further</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--workshop module-->
+    <!--workshop module-->
+    <div id="workshop">
+        <div id="instruction">
+            <label>Click and Drag your ingredients into the Cauldron.
+                <br>Click ‘Brew’ after you finish adding ingredients.</label>
+        </div>
+        <div id="witcherybook"></div>
+        <div class="items" id="rabbiteye"></div>
+        <div class="items" id="snaketongue"></div>
+        <div class="items" id="batwing"></div>
+        <div class="items" id="coral"></div>
+        <div class="items" id="octopusleg"></div>
+        <div class="items" id="lava"></div>
+        <div class="items-tag" id="rabbiteye-tag"></div>
+        <div class="items-tag" id="snaketongue-tag"></div>
+        <div class="items-tag" id="batwing-tag"></div>
+        <div class="items-tag" id="coral-tag"></div>
+        <div class="items-tag" id="octopusleg-tag"></div>
+        <div class="items-tag" id="lava-tag"></div>
+        <div id="things-used-to-brew">
+            <div id="cauldron"></div>
+            <div id="fire"></div>
+            <div id="brew-font"></div>
+        </div>
+        <div id="book-container" class="mask">
+            <div id="bookbg">
+                <div id="page-one" class="page">
+                    <div id="howtomake-title" class="book-title"></div>
+                    <ul id="howtomake-content">
+                        <li>Snakes tongue is poisonous. </li>
+                        <li>Corals induce temporary improvements in mental and physical function. </li>
+                        <li>Rabbit eye balls only work in the toxic condition. </li>
+                        <li>lava solidifying liquids into furry state. </li>
+                        <li>snake tongue and bat wings are mutually exclusive. </li>
+                        <li>octopus legs preserve the magic for one day long. </li>
+                        <li>Bat wings taste sweet.</li>
+                    </ul>
+                    <label id="howtomake-link" class="book-link">See what you can make</label>
+                </div>
+                <div id="page-two" class="page" style="display: none;">
+                    <div id="whatcanmake-title" class="book-title"></div>
+                    <ul id="things-to-make">
+                        <li id="book-elixir-text">One-day Elixir:</br>Sweet stimulants which last for one day long.</li>
+                        <li id="book-puffskein-text">Puffskein Elfin:</br>Furry creatures with two eyes. They have only one day lifespan.</li>
+                    </ul>
+                    <div id="book-elixir"></div>
+                    <div id="book-puffskein"></div>
+                    <label id="whatcanmake-link" class="book-link" style="list-style: square;">See how to make</label>
+                </div>
+                <div id="cancel-icon-01"></div>
+            </div>
+        </div>
+        <div id="outcome-container" class="mask">
+            <div id="outcone-bg">
+                <div id="success">
+                    <img id="thing-won" src="./image/outcome/outcome-elixir.png">
+                    <label id="outcome-success-title">Congratulations! You made:</label>
+                    <img id="thing-won-text" src="./image/outcome/elixir-title.png">
+                    <p id="outcome-success-text">Today is castle celebration festival with endless free beer provided by the King. Everyone will be there celebrating. There will be great money
+                        <a id="sell-action" thing-to-sell='elixir'>selling</a> your <span id="full-name">One-day Elixir</span> there.</p>
+                </div>
+                <div id="empty">
+                    <div id="outcome-empty"></div>
+                    <label id="outcome-empty-title">Opps. You fail</label>
+                    <p id="outcome-empty-text">You can click and read witchery Book to learn how to make magical portions.</p>
+                    <div id="retry-button"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://use.typekit.net/xrs4vde.js"></script>
+    <script>
+    try {
+        Typekit.load({
+            async: true
+        });
+    } catch (e) {}
+    </script>
+    <script src="./script/jquery-3.1.1.min.js"></script>
+    <script src="./script/jquery-ui.min.js"></script>
+    <script src="./script/main.js"></script>
 </body>
+
 </html>
